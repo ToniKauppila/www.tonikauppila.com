@@ -1,0 +1,191 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* WORK PAGE */
+.work-wrapper {
+	max-width: 1200px;
+	margin: auto;
+	text-align: center;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  transition: .3s ease-in-out;
+  box-shadow:  0px 6px 12px 0px rgba(0, 0, 0, 0.15);  
+  border-radius: 3px;
+}
+
+/* Hover styles for work containers */
+.container:hover {
+	box-shadow:  0px 8px 14px 0px rgba(0, 0, 0, 0.2);
+	transform: translateY(-4px);
+}
+
+.container:active {
+	box-shadow:  0px 6px 12px 0px rgba(0, 0, 0, 0.2);
+	transform: translateY(0px);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.gradient {
+	background:white;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-right: 20px;
+	opacity: 0.95;
+	display: block;
+	position: relative;
+	bottom: 0;
+	margin: auto;
+	text-align: center;
+	width: 100%;
+	border-radius: 0px 0px 3px 3px;
+}
+
+
+.description-text {
+	text-align: center;
+	display: block;
+	position: relative;
+	margin-left: 0;
+	margin-right: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	bottom: 0;
+	width: 100%;
+}
+
+.description-text h1 {
+	font-size: 24px;
+	line-height: 28px;
+	padding: 0px;
+	margin: 0;
+	font-weight: 300;
+}
+
+.description-text p {
+	font-size: 16px;
+	line-height: 22px;
+	margin: 8px 0 0 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+/* GRID STYLES */
+.row, .column-work, .column {
+    box-sizing: border-box;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 8px;
+	margin-bottom: 16px;
+}
+
+.row-images {
+    display:block;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	margin-top: 50px;
+		
+}
+.row-images img {
+	width: 100%;
+	border: 0;
+	opacity: 0;
+	padding-bottom: 100px;
+	margin: auto;
+	text-align: center;
+	display: block;
+	transition: ease 0.8s;
+}
+
+.landscape {
+	
+	max-width: 1176px;
+	margin: 0 16px 0 16px;
+}
+
+.portrait {
+	max-width: 600px;
+}
+
+.photographs-title h2 {
+	color: #E9E9E9;
+	margin: auto;
+	text-align: center;
+	padding-top: 40px;
+}
+
+img:not(.initial) {
+	transition: opacity 1s;
+}
+img.initial,
+img.loaded,
+img.error {
+	opacity: 1;
+}
+img:not([src]) {
+	visibility: hidden;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 px;
+}
+
+.column-work {
+    -ms-flex: 50%; /* IE10 */
+    flex:50%;
+	 max-width: 50%;
+    padding: 0 8px;
+}
+.column-third {
+    -ms-flex: 33.33%; /* IE10 */
+    flex: 33.3%;
+	 max-width: 33.33%;
+    padding: 0 8px;
+	box-sizing: border-box;
+}
+
+.column img, .column-work img, .column-third img {
+    margin-top: 16px;
+    vertical-align: middle;
+	border-radius: 3px 3px 0 0;
+	border:1px rgba(0,0,0,.50);
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 1100px) {
+    .column, .column-work  {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column, .column-work, .column-third {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+		margin: 0;
+    }
+}

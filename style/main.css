@@ -69,7 +69,7 @@ h2 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 32px;
 	color: #333;
-	font-weight: 300;
+	font-weight: 500;
 	margin:32px 0 16px 0;
 
 }
@@ -80,7 +80,7 @@ p {
     line-height: 28px;
     color: #333333;
     font-weight: 300;
-	margin: 10px 0 10px 0;
+	margin: 0px 0 16px 0;
 }
 
 
@@ -98,6 +98,7 @@ p.intro {
 
 /* CAROUSEL STYLES */
 .mySlides {display: none}
+
 
 
 /* Slideshow container */
@@ -302,6 +303,11 @@ left: 47px;
 	margin: 16px 0 16px 0;
 }
 
+.read-more-background{
+	background: #fafafa;
+	padding-top: 1px;
+	padding-bottom: 24px;
+}
 
 .read-more {
 	width: 100%;
@@ -991,37 +997,8 @@ svg:hover .some {
 	box-sizing: border-box;
 }
 
-/* INLINE AND FULL WIDTH STYLES */
-.inline-two{
-	width: 46%;
-	display: inline-block;
-	vertical-align: middle;
-	padding-bottom: 50px;
-	margin: 0px 3% 0px 0%;
-}
-
-.inline-three{
-	width: 30%;
-	display: inline-block;
-	padding-bottom: 50px;
-	margin: 0px 3% 0px 0%;
-}
-
-.full-width-text {
-	width: 100%;
-	margin: auto;
-}
-
-.full-width {
-	width: 100%;
-	display: block;
-	margin: auto;
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
 
 /* PHOTOS */
-
 .menu-container {
     position: relative;
     text-align: center;

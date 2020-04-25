@@ -298,6 +298,32 @@ p.intro {
 
 /* STYLES FOR THE WORK SITE */
 
+.grandOne {
+	position: absolute;
+	top: -16px;;
+	right: -16px;
+	border-radius: 200px;
+	width: 90px;
+	height: 90px;
+	background: black;
+	box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.8) ;
+}
+
+.grandOne svg {
+	width: 49px;
+	fill: white;
+	display: block;
+	margin: auto;
+	padding-top: 16px;
+}
+
+.grandOne span {
+	margin: auto;
+	font-size: 12px;
+	font-weight: 500;
+	color: white;
+}
+
 hr 	{
 	margin: auto;
 	text-align: center;
@@ -401,10 +427,10 @@ hr::before {
 }
 
 .fifty-percent-image-1 {
-	flex-basis: 45%;
+	flex-basis: 50%;
 	box-sizing: border-box;
 	align-items: center;
-	padding:0 16px 0 16px;
+	padding:24px;
 	margin:0;
 }
 
@@ -430,7 +456,7 @@ hr::before {
 }
 
 .read-more-background{
-	background: #fafafa;
+	background: white;
 	padding-top: 1px;
 	padding-bottom: 1px;
 }
@@ -639,11 +665,12 @@ input, textarea {
 	font-size: 16px;
 }
 
-button {
+.form-button {
 	background: none;
 	border: 1px white solid;
 	border-radius: 200px;
-	padding: 16px 80px;
+	width: 200px;
+	height: 48px;
 	margin: auto;
 	text-align: center;
 	color:white;
@@ -656,19 +683,44 @@ button {
 	font-weight: 400;
 	letter-spacing: 2px;
 	cursor: pointer;
+	transition: all ease-in 0.2s;
 }
 
-button:hover {
-	border: 1px var(--hover-color) solid;
+.active {
+	width: 48px;
+	height: 48px;
+	font-size: 0;
+	border-left-color: transparent;
+	animation: rotate 1.4s ease 0.2s infinite;
+	border-right-color: var(--hover-color);
+	border-top-color: var(--hover-color);
+	border-bottom-color: var(--hover-color);
+}
+
+@keyframes rotate{
+	0%{
+		transform: rotate(-360deg);
+	}
+}
+
+.active:hover {
+	border-left-color: transparent !important; 
+}
+
+.form-button:hover {
+	border-color: var(--hover-color);
 	color: var(--hover-color);
 }
-
-
 
 .honeypot-field {
 	display: none;
 }
 
+.thankyou_message h3 {
+	color: white;
+	text-align: center;
+	transition: all ease-in 0.2s;
+}
 
 /* MODAL STYLES */
 
@@ -697,7 +749,7 @@ button:hover {
 	max-width: 600px;
 	width: 100%;
 	height: 80%;
-	max-height: 740px;
+	max-height: 710px;
 	background-color: rgba(15,15,15,0.9);
 	-webkit-backdrop-filter: blur(10px);
   	backdrop-filter: blur(10px); 
@@ -726,6 +778,8 @@ button:hover {
 .modal-image {
 	margin: auto;
 	margin-bottom: 16px;
+	max-width: 90px;
+	max-height: 90px;
 }
 
 
@@ -923,6 +977,7 @@ button:hover {
 	position: relative;
 	padding: 30px;
 	margin: auto;
+	margin-top: 80px;
 	background: #191919;
 	display: block;
 	border-top: 1px solid #313131;
@@ -952,6 +1007,7 @@ button:hover {
 
 .footer-content p, .footer-content h3 {
 	color: white;
+	opacity: 0.9;
 }
 
 .footer-content h3 {
@@ -962,6 +1018,8 @@ button:hover {
 
 .footer-content p {
 	margin-bottom: 0;
+	font-size: 16px;
+	line-height: 22px;
 }
 
 .footer-image {
@@ -1451,14 +1509,7 @@ header div {
 	padding: 0;
 }
 
-.fifty-percent-image-1 {
-	flex-basis: 70%;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-.fifty-percent-image-2 {
+.fifty-percent-image-1, .fifty-percent-image-2 {
 	flex-basis: 100%;
 	box-sizing: border-box;
 	margin: 0;
@@ -1698,7 +1749,9 @@ box-sizing: border-box;
 	max-width: 400px;
 }
 	
-	
+.mobile-screen-image {
+	width: 75% !important;
+}	
 	
 }
 

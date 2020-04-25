@@ -415,21 +415,24 @@
 			
 	</div>
 	</div>
-</div>		
+</div>	
+	
 <!-- Footer starts -->
-<div style="margin-top: 24px;" id="contact" class="footer">
+<div class="footer">
 	<div class="footer-wrapper">
-		<div class="footer-content">
+		<div class="footer-image">
 			<div class="circle"></div>
 		</div>
 		<div class="footer-content">
-			<font style="font-size: 20px; line-height: 30px; letter-spacing: 0px;">Toni Kauppila</font>
-			<br>
-			<a href="tel:+358 50 40 65 208">+358 50 40 65 208</a><br>
-			<a href="mailto:toni.kauppila@hotmail.com">toni.kauppila@hotmail.com</a>
+		  <h3>Toni Kauppila</h3>
+			<p>
+			  Hi there! You have reached the footer. Thanks for checking my portfolio. I'd be happy to hear from you, so don't hesitate to shoot me a message.
+			</p>
 		</div>
 	</div>
-	<div class="secondary-button"><a class="white-link" href="images/Toni Kauppila Resume.pdf" download>Download resume</a></div>
+	<div class="secondary-button"><a href="images/Toni Kauppila Resume.pdf" download>Download resume</a></div>
+			
+	
 	<div class="fp-social-media">
 		<a href="https://www.instagram.com/tontzaboi/" title="Instagram" target="_blank">
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
@@ -493,20 +496,54 @@
 <!-- Footer ends -->
 	
 <div class="empty-space"></div>
-
-<!-- The Modal -->
+	
+<!-- Contact modal -->
 <div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-	  <div class="circle modal-image"></div>
-    <p><font style="font-size: 20px; line-height: 30px; letter-spacing: 0px;">Toni Kauppila</font>
-			<br>
-			<a href="tel:+358 50 40 65 208">+358 50 40 65 208</a><br>
-			<a href="mailto:toni.kauppila@hotmail.com">toni.kauppila@hotmail.com</a>
-  	</p>
-	  	<div class="fp-social-media">
+  	<!-- Modal content -->
+	<div class="modal-content">
+    	<span class="close">&times;</span>
+	  	<div class="circle modal-image"></div>
+		<div>
+			<form class="gform" method="POST" data-email="example@email.net"
+			action="https://script.google.com/macros/s/AKfycbwit-64b6J77rmsnjBXxxwD8JucjOvtTAj-5X6TFA/exec">
+
+			<div class="form-elements">
+				<p>
+					<font style="font-size:18px; line-height: 30px; letter-spacing: 0px;">Send me an e-postcard darling!</font>
+				</p>
+				<fieldset class="form-item">
+					<label for="name">Name </label>
+					<input id="name" name="name" placeholder="" />
+			  	</fieldset>
+
+				<fieldset class="form-item">
+					<label for="message">Message</label>
+					<textarea id="message" name="message" rows="4"
+					placeholder=""></textarea>
+				</fieldset>
+
+				<fieldset class="form-item">
+					<label for="email">Email Address</label>
+					<input id="email" name="email" type="email" value=""
+					required placeholder=""/>
+				</fieldset>
+
+				<fieldset class="pure-group honeypot-field">
+					<label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+					<input id="honeypot" type="text" name="honeypot" value="" />
+				</fieldset>
+
+				<button class="form-button">
+				Send
+				</button>
+			</div>
+			<div class="thankyou_message animated fadeIn" style="display:none;">
+				<h3>Thanks for your message! I'll get back to you as soon as I can.</h3>
+			</div>
+		</form>
+	</div>
+	<div class="fp-social-media">
 		<a href="https://www.instagram.com/tontzaboi/" title="Instagram" target="_blank">
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
 		viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
@@ -537,7 +574,7 @@
 		</svg>
 		</a>
 		&nbsp;
-		
+
 		<a href="https://fi.linkedin.com/in/toni-kauppila" title="LinkedIn" target="_blank">
 		<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
 
@@ -557,11 +594,10 @@
 		</g>
 		</svg>
 		</a>
+		</div>
 	</div>
-	  
-  </div>
-
 </div>
+<!-- Contact modal ends -->
 	
 <!-- Javascripts -->
 
@@ -683,6 +719,18 @@ var currentScrollPos = window.pageYOffset;
 		duration: 700
 	});
 	
+</script>
+	
+<script>
+// Animation to form button
+$(document).ready(function(){
+	$(".form-button").click(function(){
+		$(this).addClass("active");
+	});
+});
+</script>
+
+<script data-cfasync="false" type="text/javascript" src="scripts/form-submission-handler.js">
 </script>
 	
 

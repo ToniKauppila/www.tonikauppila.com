@@ -109,7 +109,7 @@
   -webkit-transform: rotate(45deg);
   width: 120px;
   display: block;
-  background: var(--active-color);
+  background: #7C7C7C;
   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
   position: absolute;
   top: 25px; right: -21px;
@@ -118,19 +118,19 @@
   content: "";
   position: absolute; left: 0px; top: 100%;
   z-index: -1;
-  border-left: 2px solid #00829F;
+  border-left: 2px solid #5F5F5F;
   border-right: 2px solid transparent;
   border-bottom: 2px solid transparent;
-  border-top: 2px solid #00829F;
+  border-top: 2px solid #5F5F5F;
 }
 .ribbon span::after {
   content: "";
   position: absolute; right: 0px; top: 100%;
   z-index: -1;
   border-left: 2px solid transparent;
-  border-right: 2px solid #00829F;
+  border-right: 2px solid #5F5F5F;
   border-bottom: 2px solid transparent;
-  border-top: 2px solid #00829F;
+  border-top: 2px solid #5F5F5F;
 }
 
 .description-text {

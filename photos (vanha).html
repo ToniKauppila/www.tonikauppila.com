@@ -2,27 +2,24 @@
 <html lang="fi">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="A Helsinkian Designer, who's passionate about UX/UI, photography and music.">
-<meta name="keywords" content="Toni Kauppila,UX Designer,UI Designer,Helsinkian">
-<meta name="author" content="Toni Kauppila">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Toni Kauppila | UX/UI Designer</title>
+<title>Toni Kauppila</title>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="style/main.css">
 <link rel="stylesheet" type="text/css" href="style/animate.css">
 <link rel="stylesheet" type="text/css" href="style/grid.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lato:300|Fjalla+One|Gruppo|Source+Sans+Pro:300|Assistant:300,400,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Lato:300|Fjalla+One|Source+Sans+Pro:300|Assistant:200,300,400,700,800" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body style="background-color: #121212;">
 	
 <!-- Mobile nav starts -->
-<nav id="mobile-nav-fp">
+<nav class="mobile-nav">
 	<div class="mobile-nav-content">
-		<a href="index.html" style="color: #69E4FF">
-			<svg id="Home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.5,11v8.79a.72.72,0,0,1-.79.67H15a.76.76,0,0,1-.79-.67V15a.72.72,0,0,0-.79-.67H10.59A.72.72,0,0,0,9.8,15c.07,1.12.07,3.57.07,4.77a.72.72,0,0,1-.79.67H4.22a.7.7,0,0,1-.72-.67V11a.7.7,0,0,1,.2-.45l7.81-6.92a.54.54,0,0,1,.79,0l7.87,6.85A.54.54,0,0,1,20.5,11Z" style="fill:none;stroke:#69E4FF;stroke-miterlimit:10"/></svg>
+		<a href="index.html" class="white-link">
+			<svg id="Home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.5,11v8.79a.72.72,0,0,1-.79.67H15a.76.76,0,0,1-.79-.67V15a.72.72,0,0,0-.79-.67H10.59A.72.72,0,0,0,9.8,15c.07,1.12.07,3.57.07,4.77a.72.72,0,0,1-.79.67H4.22a.7.7,0,0,1-.72-.67V11a.7.7,0,0,1,.2-.45l7.81-6.92a.54.54,0,0,1,.79,0l7.87,6.85A.54.54,0,0,1,20.5,11Z" style="fill:none;stroke:#fff;stroke-miterlimit:10"/></svg>
 			<br>
 			Home
 		</a>
@@ -35,8 +32,8 @@
 		</a>
 	</div>
 	<div class="mobile-nav-content">
-		<a href="photos.html" class="white-link">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="Photos"><path d="M20.9,19,3.08,19a.58.58,0,0,1-.58-.65l0-12.66A.58.58,0,0,1,3.1,5L20.92,5a.58.58,0,0,1,.58.65l0,12.6A.64.64,0,0,1,20.9,19Z" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><circle cx="12" cy="12.04" r="3.92" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><path d="M19.43,7.42h-.86c-.34,0-.57-.16-.57-.41V6.84c0-.25.23-.42.57-.42h.86c.34,0,.57.17.57.42v.21C20,7.26,19.72,7.42,19.43,7.42Z" style="fill:#fff"/></g></svg>
+		<a href="photos.html" style="color:#69E4FF;">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="Photos"><path d="M20.9,19,3.08,19a.58.58,0,0,1-.58-.65l0-12.66A.58.58,0,0,1,3.1,5L20.92,5a.58.58,0,0,1,.58.65l0,12.6A.64.64,0,0,1,20.9,19Z" style="fill:none;stroke:#69E4FF;stroke-miterlimit:10"/><circle cx="12" cy="12.04" r="3.92" style="fill:none;stroke:#69E4FF;stroke-miterlimit:10"/><path d="M19.43,7.42h-.86c-.34,0-.57-.16-.57-.41V6.84c0-.25.23-.42.57-.42h.86c.34,0,.57.17.57.42v.21C20,7.26,19.72,7.42,19.43,7.42Z" style="fill:#69E4FF"/></g></svg>
 			<br>
 			Photos
 		</a>
@@ -51,159 +48,75 @@
 </nav>
 <!-- Mobile nav ends -->
 
-<!-- Full size front page background  -->
-<div height="100%" style="height: 100%; background: transparent; position: relative;">
-	<div class="vertical-text"><span>Kuva: Juho Mäkelä &copy;</span>
+<!-- Desktop nav starts -->
+<nav id="navbar">
+	<div class="nav-wrapper">
+	<div class="nav-60-left">
+		<div class="title"><a class="white-link" href="index.html">Toni Kauppila</a></div>
 	</div>
-	<div class="rellax bg-parallax" data-rellax-speed="-4" >
+	<div class="nav-40-right">	
+	<div class="nav-content">
+		<a href="work.html" class="white-link">
+			Work
+		</a>
 	</div>
-	<div class="rellax bg-parallax two" data-rellax-speed="-2" >
+	<div class="nav-content">
+		<a href="photos.html" style="color:#69E4FF;">
+			<div class="nav-content-active"><div class="nav-content-active-blur"></div></div>
+			Photos
+		</a>
 	</div>
-	<div class="rellax bg-parallax three" data-rellax-speed="-1" >
+	<div class="nav-content">
+		<a id="modalBtn" class="white-link">
+			Contact
+		</a>
 	</div>
-	
-	<div class="bg">
-		<section class="mobile-gradient"></section>
-		<div class="fp-container">
-			<h1>TONI KAUPPILA</h1>
-			<p>I'm a Helsinkian Designer, who's passionate about UX/UI, photography and music. Welcome to my porfolio!</p>
+	</div>
+	</div>
+</nav>
+<!-- Desktop nav ends -->
 
-			<div class="fp-nav">
-				<div class="fp-nav-button right-border">
-					<div class="fp-nav-button-content">
-					<a href="work.html"	class="white-link">
-						
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="Work front page"><path class="svg-fill" d="M22.25,18.94H1.8a.78.78,0,0,1-.8-.71v-.29H23v.29C23.05,18.66,22.67,18.94,22.25,18.94Z"/><path class="svg-fill-stroke" d="M4,5.06H20a1,1,0,0,1,1,1V16.43a0,0,0,0,1,0,0H3a0,0,0,0,1,0,0V6.06A1,1,0,0,1,4,5.06Z" style="fill:none;stroke-miterlimit:10"/></g></svg>
-						
-						<br>
-
-						Work
-					  </a>
-					</div>
-				</div>
-				<div class="fp-nav-button right-border">
-					<div class="fp-nav-button-content">
-					<a href="photos.html" class="white-link">	
-						
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="Photos front page"><path class="svg-fill-stroke" d="M20.9,19,3.08,19a.58.58,0,0,1-.58-.65l0-12.66A.58.58,0,0,1,3.1,5L20.92,5a.58.58,0,0,1,.58.65l0,12.6A.64.64,0,0,1,20.9,19Z" style="fill:none;stroke-miterlimit:10"/><circle class="svg-fill-stroke" cx="12" cy="12.04" r="3.92" style="fill:none;stroke-miterlimit:10"/><path class="svg-fill" d="M19.43,7.42h-.86c-.34,0-.57-.16-.57-.41V6.84c0-.25.23-.42.57-.42h.86c.34,0,.57.17.57.42v.21C20,7.26,19.72,7.42,19.43,7.42Z" /></g></svg>
-						
-						<br>
-
-						Photos
-						</a>
-					</div>
-				</div>
-				<div class="fp-nav-button">
-					<div class="fp-nav-button-content">
-					<a id="modalBtn" class="white-link" style="cursor: pointer;">
-						
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="Contact front page"><path class="svg-fill-stroke" d="M20.92,19H3.08a.59.59,0,0,1-.58-.66V5.65A.58.58,0,0,1,3.08,5H20.92a.58.58,0,0,1,.58.65V18.34A.59.59,0,0,1,20.92,19Z" style="fill:none;stroke-miterlimit:10"/><path class="svg-fill-stroke" d="M2.62,5.19l8.65,8.75a1,1,0,0,0,1.46,0l8.65-8.75" style="fill:none;stroke-miterlimit:10"/><line class="svg-fill-stroke" x1="9.49" y1="12.13" x2="2.62" y2="19" style="fill:none;stroke-miterlimit:10"/><line class="svg-fill-stroke" x1="21.38" y1="19" x2="14.51" y2="12.13" style="fill:none;stroke-miterlimit:10"/></g></svg>
-						
-						<br>
-						
-						Contact
-					</a>	
-					</div>
-				</div>
-			</div>
-			
+<div class="top-spacer"></div>
+<div id="wrapper">
+	<header>
+		<div>Photos</div>
+	</header>
+	<a href="people.html">
+	<div class="menu-container animated fadeIn" style="background-image: url(images/people/ii_seurasaari_2_FB.jpg)">
+		<div class="menu-overlay"></div>
+		<div class="menu-text animated fadeInUp">People</div>
 	</div>
-		<section id="go-down-chevron" class="go-down">
-		  <a href="#work"><span></span></a>
-		</section>
+	</a>
+
+	<a href="landscapes.html">
+	<div class="menu-container animated fadeIn" id="landscapes" style="background-image: url(images/landscapes/landscape-1.jpg);">
+		<div class="menu-overlay"></div>
+		<div class="menu-text animated fadeInUp">Landscapes</div>
+	</div>
+	</a>
 </div>
+	
+<div style="max-width: 1174px;margin: auto; padding: 40px 0 40px 0; text-align: center"><a href="https://www.instagram.com/tontzaboi/" title="Instagram" target="_blank">
+	<img src="images/logos/instagram_white.svg" style="margin: auto; text-align: center; width: 40px;padding: 10px;"></a>
+	<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+	<iframe src="//lightwidget.com/widgets/7a69e73e29bc5d2ab6fa0373a358ee47.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
 </div>
-<!-- Full size front page background  -->
 
-<!-- Content starts -->
-<div id="work" style="width: 100%; background: white; margin: auto; position: relative; padding:24px; box-sizing: border-box;">
-	<div class="fp-content">
-		<div class="fp-content-picture">
-			<img alt="Work" src="images/K-Ostokset.png">
-		</div>
-		<div class="fp-content-text" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" 
- data-aos-offset="0" data-aos-once="true">
-				
-				<h1>Work</h1>
 
-				<p>I create strongly user centric and aesthethic digital services as a UX Designer. I'm currently working in-house at K-group. 
-				
-				</p><br>
-
-				<a class="button" href="work.html">Check it out</a>
-					
-		</div>
-	</div>
-	<div class="fp-content" style="flex-direction: row-reverse;">
-		<div class="fp-content-picture desktop-hide">
-			<img alt="Photography" src="images/videos/canon.gif">
-		</div>
-		<div class="fp-content-picture-photos">
-			<div class="slideshow-container">
-				
-				<div class="mySlides fade">
-					<a href="landscapes.html">
-			  			<img alt="Landscapes" src="images/landscapes/landscape-1.jpg" style="width:100%">
-					</a>
-				</div>
-
-				<div class="mySlides fade">
-				  	<a href="people.html">
-			  			<img alt="Portraits" src="images/landscapes/landscape-14.jpg" style="width:100%">
-					</a>
-				</div>
-				
-				<div class="mySlides fade">
-					<a href="landscapes.html">
-			  			<img alt="Landscapes" src="images/landscapes/landscape-1.jpg" style="width:100%">
-					</a>
-				</div>
-				
-			</div>
-			
-			<a class="prev" data-aos="zoom-in-left" data-aos-easing="ease-in-out" 
-			data-aos-offset="0" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" data-aos="zoom-in-right" data-aos-easing="ease-in-out" 
-			data-aos-offset="0" onclick="plusSlides(1)">&#10095;</a>
-			
-		</div>
-		<div class="fp-content-text" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" 
- data-aos-offset="0" data-aos-once="true">
-			
-			
-				<h1>Photos</h1>
-
-				<p>
-				I usually spend my holidays travelling and  photographing landscapes and people. Once in a while I do some freelancing as well.</p>
-			
-				<br>
-
-				<a class="button" href="photos.html">See photos</a>
-						
-			</div>
-		</div>
-	
-	
-
-  
-	
-</div>
-<!-- Content ends -->
-	
 <!-- Footer starts -->
-<div class="footer">
+<div id="contact" class="footer">
 	<div class="footer-wrapper">
-		<div class="footer-image">
+		<div class="footer-content">
 			<div class="circle"></div>
 		</div>
 		<div class="footer-content">
-			<h3>Hi there!</h3>
-			<p>Thanks for checking my portfolio! I would be happy to hear from you, so <a id="modalBtn2">shoot me an email</a> or message me on social media.</p>
+			<font style="font-size:18px; line-height: 30px; letter-spacing: 0px;">Toni Kauppila</font>
+			<br>
+			<a href="tel:+358 50 40 65 208">+358 50 40 65 208</a><br>
+			<a href="mailto:toni.kauppila@hotmail.com">toni.kauppila@hotmail.com</a>
 		</div>
 	</div>
 	<div class="secondary-button"><a class="white-link" href="images/Toni Kauppila Resume.pdf" download>Download resume</a></div>
-			
-	
 	<div class="fp-social-media">
 		<a href="https://www.instagram.com/tontzaboi/" title="Instagram" target="_blank">
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
@@ -268,8 +181,6 @@
 	
 <div class="empty-space"></div>
 
-<!-- Trigger/Open The Modal -->
-
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
@@ -277,51 +188,11 @@
   <div class="modal-content">
     <span class="close">&times;</span>
 	  <div class="circle modal-image"></div>
-		<p><font style="font-size:18px; line-height: 30px; letter-spacing: 0px;">Send me a postcard darling!</font>
-		</p>
-<div>
-<form class="gform" method="POST" data-email="example@email.net"
-  action="https://script.google.com/macros/s/AKfycbwit-64b6J77rmsnjBXxxwD8JucjOvtTAj-5X6TFA/exec">
-
-    <div class="form-elements">
-      <fieldset class="form-item">
-        <label for="name">Name </label>
-        <input id="name" name="name" placeholder="" />
-      </fieldset>
-
-      <fieldset class="form-item">
-        <label for="message">Message </label>
-        <textarea id="message" name="message" rows="4"
-        placeholder=""></textarea>
-      </fieldset>
-
-      <fieldset class="form-item">
-        <label for="email">Email Address</label>
-        <input id="email" name="email" type="email" value=""
-        required placeholder=""/>
-      </fieldset>
-
-      <fieldset class="pure-group honeypot-field">
-        <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
-        <input id="honeypot" type="text" name="honeypot" value="" />
-      </fieldset>
-
-		<button class="se">
-		Send
-		</button>
-    </div>
-
-    <div class="thankyou_message" style="display:none;">
-      <h2><em>Thanks</em> for contacting us!
-        We will get back to you soon!</h2>
-    </div>
-
-  </form>
-  </div>
-	  
-<!-- END -->
-	  
-	  
+    <p><font style="font-size:18px; line-height: 30px; letter-spacing: 0px;">Toni Kauppila</font>
+			<br>
+			<a href="tel:+358 50 40 65 208">+358 50 40 65 208</a><br>
+			<a href="mailto:toni.kauppila@hotmail.com">toni.kauppila@hotmail.com</a>
+  	</p>
 	  	<div class="fp-social-media">
 		<a href="https://www.instagram.com/tontzaboi/" title="Instagram" target="_blank">
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
@@ -385,7 +256,6 @@ var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
 var btn = document.getElementById("modalBtn");
-var btn = document.getElementById("modalBtn2");
 var btnMobile = document.getElementById("modalBtnMobile");
 
 // Get the <span> element that closes the modal
@@ -413,69 +283,10 @@ window.onclick = function(event) {
 }
 </script>	
 	
-<script>
-
-// When the user scrolls down 20px from the top of the document, slide down the navbar
-// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("mobile-nav-fp").style.bottom = "0";
-  } else {
-    document.getElementById("mobile-nav-fp").style.bottom = "-70px";
-  }
-}
-	
-</script>
-
 <!-- JavaScripts -->	
-<script src="scripts/rellax.min.js"></script>
-<script>
-	
-/* Initiate Rellax and LazyLoad */	
-var rellax = new Rellax('.rellax');
-	horizontal: false
-	
-</script>	
-	
-	
-<script>
-	
-/* Slideshow for camera */
-var slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-	
 <script>
 
-/*Initiate AOS */
-
-	
 /*Initiate AOS */
 AOS.init({
 
@@ -486,38 +297,7 @@ AOS.init({
 });
 	
 </script>
-	
-	
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
 
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 1200, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
-
-<script data-cfasync="false" type="text/javascript" src="scripts/form-submission-handler.js">
-</script>
-
-	
 </body>
 </html>

@@ -142,6 +142,7 @@
 	padding-bottom: 24px;
 	bottom: 0;
 	width: 100%;
+	white-space: normal;
 }
 
 .description-text h1 {
@@ -359,7 +360,7 @@ img:not([src]) {
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 1100px) {
-    .column, .column-work  {
+    .column, .column-work, .column-third  {
         -ms-flex: 50%;
         flex: 50%;
         max-width: 50%;
@@ -387,7 +388,7 @@ min-width: 70vw;
 	grid-auto-flow: dense;
 }
 	
-.horizontal-1, .horizontal-2, .big-1 {
+.horizontal-1, .horizontal-2, .horizontal-3, .big-1, .big-2, .big-3 {
 	grid-column: auto;
 	grid-row: auto;
 }

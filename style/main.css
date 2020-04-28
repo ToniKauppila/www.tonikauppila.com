@@ -105,10 +105,14 @@ h3 {
 p, li {
     font-family: 'Open Sans';
     font-size: 18px;
-    line-height: 26px;
+    line-height: 28px;
     color: #333333;
     font-weight: 300;
 	margin: 0px 0 16px 0;
+}
+
+.semi-bold {
+	font-weight: 400;
 }
 
 
@@ -321,6 +325,7 @@ p.intro {
 	font-weight: 500;
 	margin-bottom: 0;
 	color: var(--active-color);
+	font-family: 'Fjalla One';
 }
 
 .result p {

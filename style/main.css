@@ -4,12 +4,14 @@
 /* GENERAL STYLES */
 
 :root {
+	--text-color: #333333;
+	--inverse: white;
 	--active-color: #00B3DB;
 	--hover-color: #69E4FF;
 	--mark-color: #EBFBFF;
 	--lightgrey: #999999;
-	--darkbackground: #191919;
-	
+	--background: #191919;
+	--background-opacity: #191919E6;
 }
 
 /* Filters */
@@ -63,7 +65,7 @@ fill:var(--hover-color);
 }
 
 a:hover .svg-fill-stroke{
-	stroke:#69E4FF;
+	stroke:var(--hover-color);
 }
 
 
@@ -73,14 +75,14 @@ a:hover .svg-fill-stroke{
 }
 
 .white-link {
-	color: white;
+	color: var(--inverse);
 }
 
 h1 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 40px;
 	font-weight: 300;
-	color: #333;
+	color: var(--text-color);
 	margin:0 0 16px 0;
 }
 
@@ -88,7 +90,7 @@ h2 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 32px;
 	line-height: 38px;
-	color: #333;
+	color: var(--text-color);
 	font-weight: 300;
 	margin:32px 0 16px 0;
 }
@@ -97,7 +99,7 @@ h3 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 24px;
 	line-height: 38px;
-	color: #333;
+	color: var(--text-color);
 	font-weight: 300;
 	margin:32px 0 16px 0;
 }
@@ -105,9 +107,16 @@ h3 {
 p, li {
     font-family: 'Open Sans';
     font-size: 18px;
-    line-height: 28px;
-    color: #333333;
+    line-height: 30px;
+    color: var(--text-color);
     font-weight: 300;
+}
+
+p {
+	margin: 0px 0 24px 0;
+}
+
+li {
 	margin: 0px 0 16px 0;
 }
 
@@ -304,10 +313,46 @@ p.intro {
 
 /* STYLES FOR THE WORK SITE */
 
+
+.team {
+	display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+	grid-column-gap: 24px;
+	margin-top: 24px;
+	
+}
+
+.team-member {
+	height: 150px;
+}
+
+.team-member-img {
+	width: 70px;
+	height: 70px;
+	margin: auto;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 1px solid #E8E8E8;
+}
+
+.team-member p {
+	text-align: center;
+	margin-top: 12px;
+	font-size: 15px;
+	line-height: 22px;
+}
+
 .results {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
  	grid-column-gap: 24px;
+}
+
+.four-inline {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
 
 .result {
@@ -446,9 +491,11 @@ hr::before {
 	filter: none;
 }
 
+/*
 .logo:hover {
 	transform: scale(1.2)
 }
+*/
 
 .images-side-by-side {
 	display: flex;
@@ -476,10 +523,6 @@ hr::before {
 	align-items: center;
 }
 
-
-.work-content,.work-content-black p {
-	margin: 0 0 16px 0;
-}
 
 .work-content,.work-content-black h2 {
 	margin: 16px 0 16px 0;
@@ -599,7 +642,7 @@ hr::before {
 	margin: auto;
 	border: solid #292929 2px;
 	position: relative;
-	background-image: url(../images/Toni_Kauppila_profile_photo.jpg);
+	background-image: url(../images/portraits/Toni_Kauppila_profile.jpg);
 }
 
 /* CTA BUTTONS */
@@ -609,15 +652,15 @@ hr::before {
 	text-transform: uppercase;
 	font-weight: 400;
 	letter-spacing: 2px;
-	width: 200px;
-	height: 30px;
+	display: block;
 	text-align: center;
 	line-height: 30px;
-	padding: 15px 35px 15px 35px;
+	width: 180px;
+	padding: 8px 0px 8px 0px;
 	border-radius: 200px;
 	background: white;
-	border: solid #939393 1px;
-	color: black;
+	border: solid var(--text-color) 1px;
+	color: var(--text-color);
 	-webkit-transition:  0.1s ease-out;
 	-moz-transition:  0.1s ease-out;
 	-o-transition:  0.3s ease-out;
@@ -643,21 +686,17 @@ hr::before {
 }
 
 
-.button a {
-	color: black !important;
-}
-
 .button:hover {
-	color: white;
-	background: #191919;
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-	border: solid #191919 1px;
+	color: var(--hover-color);
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+	border: solid var(--hover-color) 1px;
 }
 
 .button:active {
-	color: white;
-	background: #363636;
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+	color: var(--active-color);
+	border: solid var(--active-color) 1px;
+	letter-spacing: 2px;
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
 }
 
 /* FORM STYLES */
@@ -669,7 +708,7 @@ form {
 .form-elements {
 	width: 80%;
 	border: 0;
-	color: white;
+	color: var(--inverse);
 	margin: auto;
 }
 
@@ -692,11 +731,12 @@ input, textarea {
 	border: 1px solid #484848;
 	padding: 16px;
 	border-radius: 4px;
-	background: var(--darkbackground);
-	color: white;
+	background: var(--background);
+	color: var(--inverse);
 	margin: 0;
 	font-family: 'Open Sans';
 	font-size: 16px;
+	resize: none;
 }
 
 .form-button {
@@ -751,7 +791,7 @@ input, textarea {
 }
 
 .thankyou_message h3 {
-	color: white;
+	color:var(--inverse);
 	text-align: center;
 	transition: all ease-in 0.2s;
 }
@@ -783,7 +823,7 @@ input, textarea {
 	max-width: 600px;
 	width: 100%;
 	height: 80%;
-	max-height: 710px;
+	max-height: 666px;
 	background-color: rgba(15,15,15,0.9);
 	-webkit-backdrop-filter: blur(10px);
   	backdrop-filter: blur(10px); 
@@ -803,7 +843,7 @@ input, textarea {
 }
 
 .modal-content p {
-	color: white;	
+	color: var(--inverse);	
 	text-align: center;
 	font-size: 16px;
 	line-height: 22px;
@@ -812,6 +852,7 @@ input, textarea {
 .modal-image {
 	margin: auto;
 	margin-bottom: 16px;
+	margin-top: 8px;
 	max-width: 90px;
 	max-height: 90px;
 }
@@ -865,7 +906,7 @@ input, textarea {
 }
 
 .bg-parallax { 
-	background-image: url(../testi2.png);
+	background-image: url("../images/portraits/Toni_Kauppila_2.png");
 	background-size: cover;
 	height: 100%;
 	width: 100%;
@@ -886,7 +927,7 @@ input, textarea {
 
 
 .bg { 
-    background-image: url("../testi1.png");
+    background-image: url("../images/portraits/Toni_Kauppila_1.png");
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
@@ -922,8 +963,8 @@ input, textarea {
   width: 24px;
   height: 24px;
   margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: up-down 2s infinite;
@@ -1006,21 +1047,24 @@ input, textarea {
 	padding: 0px 60px 0 60px;
 }
 
+.fp-content-text p {
+	margin-bottom: 0px;
+}
+
 
 .footer {
 	position: relative;
 	padding: 30px;
 	margin: auto;
 	margin-top: 80px;
-	background: #191919;
+	background: var(--background);
 	display: block;
-	border-top: 1px solid #313131;
-	box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.5);
+	box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.1);
 }
 
 
 .footer-wrapper {
-	max-width: 500px;
+	max-width: 480px;
 	height: 100%;
 	width: 100%;
 	margin: auto;
@@ -1033,27 +1077,34 @@ input, textarea {
 .footer-content {
 	flex-basis: 100%;
 	margin: auto;
-	padding: 16px;
+	padding: 16px 16px 0 16px;
 	text-align: center;
 	color: white;
 	line-height: 20px;
 }
 
 .footer-content p, .footer-content h3 {
-	color: white;
-	opacity: 0.9;
+	color: var(--inverse);
+	opacity: 0.90;
 }
 
 .footer-content h3 {
 	margin-top: 28px;
-	margin-bottom:6px;
+	margin-bottom:0px;
 	font-weight: 400;
 }
 
+.footer-content h4 {
+	margin-bottom:24px;
+	margin-top: 4px;
+	font-size: 18px;
+	opacity: 0.6;
+	font-weight: 300;
+}
+
+
 .footer-content p {
-	margin-bottom: 0;
-	font-size: 16px;
-	line-height: 22px;
+	margin-bottom: 16px;
 }
 
 .footer-image {
@@ -1066,7 +1117,7 @@ input, textarea {
 
 .fp-container {
 	width: 500px;
-	height: 250px;
+	height: 90px;
 	position:absolute;
 	left:0; right:0;
 	top:0; bottom:0;
@@ -1083,16 +1134,15 @@ input, textarea {
 	letter-spacing: 3px;
 	text-align: center;
 	margin: 0;
-	padding: 0px 0px 8px 0px;
 	color: white;
 	text-shadow: 0 0 1px rgba(0,0,0,0.1);
 }
 
 .fp-container p {
-	line-height: 24px;
-	font-size: 18px;
+	line-height: 26px;
+	font-size: 20px;
 	text-align: center;
-	max-width: 400px;
+	max-width: 390px;
 	margin: auto;
 	padding-bottom: 20px;
 	color: white;
@@ -1173,7 +1223,7 @@ svg:hover .some {
 	width: 100%;
 	margin: auto;
 	height: 64px;
-	background: rgba(15,15,15,0.9);
+	background: var(--background-opacity);
 	-webkit-backdrop-filter: blur(10px);
   	backdrop-filter: blur(10px); 
 	border-bottom: 1px solid rgba(180,180,180,.04);
@@ -1184,6 +1234,21 @@ svg:hover .some {
 	z-index: 9998;
 	box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.1);
  	 
+}
+
+#navbar-front-page {
+	position: absolute;
+	transition: top 0.4s;
+	top: 0;
+	width: 100%;
+	margin: auto;
+	height: 64px;
+	background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.0));
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 9998;
 }
 
 .nav-wrapper {
@@ -1214,7 +1279,7 @@ svg:hover .some {
 	position: absolute;
 	display: block;
 	top: -26px;
-	height: 1px;
+	height: 2px;
 	border-radius: 0 0 100px 100px;
 	background-color: var(--hover-color);
 }
@@ -1240,7 +1305,7 @@ svg:hover .some {
 }
 
 .nav-content:hover {
-	color: #59E2FF;
+	color: var(--hover-color);
 	cursor: pointer;
 }
 
@@ -1272,7 +1337,6 @@ svg:hover .some {
 	font-weight: normal;
 	text-align: left;
 	letter-spacing: 2px;
-	color: #333;
 	vertical-align: middle;
 	line-height: 64px;
 }
@@ -1467,7 +1531,7 @@ h2 {
 	
 p, li {
 	font-size: 18px;
-	line-height: 26px;
+	line-height: 28px;
 }
 
 .menu-container:after {
@@ -1498,6 +1562,25 @@ p, li {
 }
 
 @media screen and (max-width: 600px) {
+	
+.form-elements {
+	width: 100%;
+}
+
+.button {
+	margin: auto;
+}
+	
+.fp-container p {
+	line-height: 24px;
+	font-size: 18px;
+	margin-top: -6px;
+}
+
+.results {
+	grid-template-columns: 1fr;
+}
+
 	
 	
 header {
@@ -1590,13 +1673,14 @@ header div {
 }
 
 .bg {
-	background-image: url(../images/mobile_header.jpg);
+	background-image: url(../images/portraits/Toni_Kauppila_3.jpg);
 	background-position: top;
 	position: relative;
+	transition: all 0.1s;
 }
 	
 	
-.slideshow-container, .dot, .prev, .next, .fp-content-picture-photos, #navbar, .top-spacer  {
+.slideshow-container, .dot, .prev, .next, .fp-content-picture-photos, #navbar, #navbar-front-page, .top-spacer  {
 	display: none !important;
 	overflow: hidden !important;
 	width: 0!important;
@@ -1732,7 +1816,7 @@ box-sizing: border-box;
 	
 .fp-content-text {
 	box-sizing: border-box;
-	padding: 0px 24px 0 24px;
+	padding: 0px;
 }
 	
 .fp-content {
@@ -1787,9 +1871,6 @@ box-sizing: border-box;
 	width: 75% !important;
 }
 	
-.results {
-	grid-template-columns: 1fr;
-}
 	
 }
 

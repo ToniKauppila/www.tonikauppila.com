@@ -917,14 +917,6 @@ input, textarea {
 	top: 0;
 }
 
-.two { 
-	background-image: url(../testi3.png);
-}
-
-.three { 
-	background-image: url(../testi4.png);
-}
-
 
 .bg { 
     background-image: url("../images/portraits/Toni_Kauppila_1.png");
@@ -1029,7 +1021,7 @@ input, textarea {
 	color: grey;
 	align-items: center;
 	position: relative;
-	background: url(../images/canon.jpg);
+	background-image: url(../images/canon.jpg);
 	background-size: 500px;
 	background-repeat: no-repeat;
 	background-position:center;
@@ -1496,7 +1488,7 @@ ul.breadcrumb:hover {
 }
 	
 .fp-content-picture-photos {
-	display: none;
+	background-image: none;
 }
 
 nav {
@@ -1669,7 +1661,7 @@ header div {
 }	
 	
 .bg-parallax {
-	display: none;
+	background-image: none;
 }
 
 .bg {

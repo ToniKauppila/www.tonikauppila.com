@@ -2,15 +2,18 @@
 <html lang="fi">
 <head>
 <meta charset="utf-8">
-<title>Toni Kauppila</title>
+<title>Toni Kauppila | Work</title>
+<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="style/main.css">
 <link rel="stylesheet" type="text/css" href="style/animate.css">
 <link rel="stylesheet" type="text/css" href="style/grid.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Lato:300|Fjalla+One|Source+Sans+Pro:300|Assistant:300,400,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Lato:300|Fjalla+One|Source+Sans+Pro:300" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	
 </head>
 
 <body>
@@ -25,7 +28,7 @@
 		</a>
 	</div>
 	<div class="mobile-nav-content">
-		<a href="work.html" style="color:#69E4FF;">
+		<a href="work.html" style="color: var(--hover-color);">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="Work"><path d="M22.25,18.94H1.8a.78.78,0,0,1-.8-.71v-.29H23v.29C23.05,18.66,22.67,18.94,22.25,18.94Z" style="fill:#69E4FF"/><path d="M4,5.06H20a1,1,0,0,1,1,1V16.43a0,0,0,0,1,0,0H3a0,0,0,0,1,0,0V6.06A1,1,0,0,1,4,5.06Z" style="fill:none;stroke:#69E4FF;stroke-miterlimit:10"/></g></svg>
 			<br>
 			Work
@@ -56,7 +59,7 @@
 	</div>
 	<div class="nav-40-right">	
 	<div class="nav-content">
-		<a href="work.html" style="color:#69E4FF;">
+		<a href="work.html" style="color:var(--hover-color);">
 			<div class="nav-content-active"><div class="nav-content-active-blur"></div></div>
 			Work
 		</a>
@@ -84,12 +87,11 @@
 		<div>Work</div>
 	</header>
 	
-	<div class="work-wrapper">
+	<div class="work-wrapper" data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-once="true">
 		
 	<!-- Grid -->
 	<div class="row">
-	  <div class="column-work" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" 
-			data-aos-offset="0" data-aos-once="true">
+	  <div class="column-work">
 		<a href="k-ostokset.html">
 			<div class="container">
 				<div class="grandOne">
@@ -115,17 +117,33 @@
 			</div>
 		</a>
 	  </div>
-	  <div class="column-work" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" 
-			data-aos-offset="0" data-aos-once="true">
+	  <div class="column-work">
+		  <a href="illustrations.html">
+			<div class="container">
+				<div class="container-image" style="background-image:url(images/illustrations/Pahvilaatikko_hero.svg)" alt="K-Ostokset"></div>
+				<div class="gradient">
+					<div class="description-text">
+
+						<h1>Illustrations</h1>
+				
+						<p>Illustrations for business needs and personal projects
+						</p>
+						
+					</div>
+				</div>
+			</div>
+		  </a>
+	  </div>
+	  <div class="column-work">
 		<a href="k-ai.html">
 			<div class="container">
-				<div class="container-image" style="background-image:url(images/logos/K-AI_logo_square.png); background-size: cover; width: 100%; border-top-left-radius: 40px; border-top-right-radius: 40px;" alt="K-Ostokset"></div>
+				<div class="container-image" style="background-image:url(images/logos/K-AI_logo_square.png); background-size: cover; width: 100%; border-top-left-radius: 18px; border-top-right-radius: 18px;" alt="K-Ostokset"></div>
 				<div class="gradient">
 					<div class="description-text">
 
 						<h1>Case K-AI</h1>
 						
-						<p>Branding K-groups Artificial Intelligence
+						<p>Branding K-group's Artificial Intelligence
 						</p>
 						
 					</div>
@@ -133,8 +151,7 @@
 			</div>
 		</a>
 	  </div>
-	  <div class="column-work " data-aos="fade-zoom-in" data-aos-easing="ease-in-back" 
-			data-aos-offset="0" data-aos-once="true">
+	  <div class="column-work" >
 			<div class="container-disabled noHover">
  				<div class="ribbon"><span>Coming soon</span></div>
 				<div class="container-image  opacity grayscale" style="background-image:url(images/K-Ruoka.jpg)" alt="K-Ruoka.fi"></div>
@@ -149,8 +166,7 @@
 				</div>
 			</div>
 	  </div>
-	  <div class="column-work" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" 
-			data-aos-offset="0" data-aos-once="true">
+	  <div class="column-work">
 			<div class="container-disabled noHover">
  				<div class="ribbon"><span>Coming soon</span></div>
 				<div class="container-image  opacity grayscale" style="background-image:url(images/K-Kuitit_mock_up.png)" alt="K-Ostokset"></div>
@@ -165,24 +181,6 @@
 				</div>
 			</div>
 	  </div>
-	  <div class="column-work" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" 
-			data-aos-offset="0" data-aos-once="true">
-			<div class="container-disabled noHover">
- 				<div class="ribbon"><span>Coming soon</span></div>
-				<div class="container-image opacity grayscale" style="background-image:url(images/K-Ruoka_pahvilaatikko.png)" alt="K-Ostokset"></div>
-				<div class="gradient opacity grayscale">
-					<div class="description-text">
-
-						<h1>Illustrations</h1>
-				
-						<p>Illustrations for business needs
-						</p>
-						
-					</div>
-				</div>
-			</div>
-	  </div>
-
 </div>
 		
 <br>
@@ -224,23 +222,20 @@
 </div>
 </div>
 	
-	
 <!-- Footer starts -->
 <div class="footer">
 	<div class="footer-wrapper">
 		<div class="footer-image">
-			<div class="circle"></div>
+			<div data-tippy-content="Yep, that's me!" rel="tooltip" class="circle"></div>
 		</div>
 		<div class="footer-content">
-		  <h3>Toni Kauppila</h3>
-			<p>
-			  Hi there! You have reached the footer. Thanks for checking my portfolio. I'd be happy to hear from you, so don't hesitate to shoot me a message.
-			</p>
+			<h3>Toni Kauppila</h3>
+			<h4>UX & Visual Designer</h4>
 		</div>
 	</div>
-	<div class="secondary-button"><a href="images/Toni Kauppila Resume.pdf" download>Download resume</a></div>
-			
-	
+	<div class="secondary-button">
+		<a class="white-link" href="images/Toni Kauppila Resume.pdf" download>Download resume</a>
+	</div>
 	<div class="fp-social-media">
 		<a href="https://www.instagram.com/tontzaboi/" title="Instagram" target="_blank">
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
@@ -294,10 +289,10 @@
 		</a>
 	</div>
 
-	<div style="margin: auto; color: grey; text-align: center; padding-top:25px; font-family: 'Lato'; font-size: 11px; line-height: 16px; width: 100%;">
+	<div style="margin: auto; color: grey; text-align: center; padding-top:24px; font-size: 12px; line-height: 18px; width: 100%;">
 		
-	Desing and coding by me<br>
-	&copy; Toni Kauppila 2019
+	Desing and code by me<br>
+	&copy; Toni Kauppila 2020
 		
 	</div>
 </div>
@@ -351,61 +346,21 @@
 			</div>
 		</form>
 	</div>
-	<div class="fp-social-media">
-		<a href="https://www.instagram.com/tontzaboi/" title="Instagram" target="_blank">
-		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
-		viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-		<g>
-			<path class="some" opacity="0.70" fill="white"  d="M25,8.9c5.3,0,6,0,8.1,0.1c2,0.1,3,0.4,3.7,0.7c0.9,0.4,1.6,0.8,2.3,1.5c0.7,0.7,1.1,1.4,1.5,2.3
-				c0.3,0.7,0.6,1.8,0.7,3.7c0.1,2.1,0.1,2.7,0.1,8.1s0,6-0.1,8.1c-0.1,2-0.4,3-0.7,3.7c-0.4,0.9-0.8,1.6-1.5,2.3
-				c-0.7,0.7-1.4,1.1-2.3,1.5c-0.7,0.3-1.8,0.6-3.7,0.7c-2.1,0.1-2.7,0.1-8.1,0.1s-6,0-8.1-0.1c-2-0.1-3-0.4-3.7-0.7
-				c-0.9-0.4-1.6-0.8-2.3-1.5C10.2,38.6,9.8,38,9.4,37c-0.3-0.7-0.6-1.8-0.7-3.7c-0.1-2.1-0.1-2.7-0.1-8.1s0-6,0.1-8.1
-				c0.1-2,0.4-3,0.7-3.7c0.4-0.9,0.8-1.6,1.5-2.3c0.7-0.7,1.4-1.1,2.3-1.5C13.9,9.4,15,9.1,16.9,9C19,8.9,19.7,8.9,25,8.9 M25,5.2
-				c-5.4,0-6.1,0-8.2,0.1c-2.1,0.1-3.6,0.4-4.9,0.9c-1.3,0.5-2.4,1.2-3.5,2.3C7.2,9.7,6.6,10.8,6,12.1c-0.5,1.3-0.8,2.7-0.9,4.9
-				C5,19.1,5,19.8,5,25.2c0,5.4,0,6.1,0.1,8.2c0.1,2.1,0.4,3.6,0.9,4.9c0.5,1.3,1.2,2.4,2.3,3.5c1.1,1.1,2.2,1.8,3.5,2.3
-				c1.3,0.5,2.7,0.8,4.9,0.9c2.1,0.1,2.8,0.1,8.2,0.1s6.1,0,8.2-0.1c2.1-0.1,3.6-0.4,4.9-0.9c1.3-0.5,2.4-1.2,3.5-2.3
-				c1.1-1.1,1.8-2.2,2.3-3.5c0.5-1.3,0.8-2.7,0.9-4.9c0.1-2.1,0.1-2.8,0.1-8.2s0-6.1-0.1-8.2c-0.1-2.1-0.4-3.6-0.9-4.9
-				c-0.5-1.3-1.2-2.4-2.3-3.5c-1.1-1.1-2.2-1.8-3.5-2.3c-1.3-0.5-2.7-0.8-4.9-0.9C31.1,5.3,30.4,5.2,25,5.2L25,5.2z"/>
-			<path class="some" opacity="0.70" fill="white" d="M25,15c-5.7,0-10.3,4.6-10.3,10.3S19.3,35.5,25,35.5s10.3-4.6,10.3-10.3S30.7,15,25,15z M25,31.9
-				c-3.7,0-6.7-3-6.7-6.7c0-3.7,3-6.7,6.7-6.7c3.7,0,6.7,3,6.7,6.7C31.7,28.9,28.7,31.9,25,31.9z"/>
-			<circle class="some" opacity="0.70" fill="white"  cx="35.7" cy="14.6" r="2.4"/>
-		</g>
-		</svg>
-		</a>
-		&nbsp;
-		<a href="https://www.facebook.com/Thoun" title="Facebook" target="_blank">
-		<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
-			 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-
-		<path opacity="0.70" fill="white" class="some" d="M28.1,45.1V26.9h6.1l0.9-7.1h-7v-4.5c0-2,0.6-3.4,3.5-3.4l3.7,0V5.5c-0.6-0.1-2.9-0.3-5.5-0.3
-			c-5.4,0-9.1,3.3-9.1,9.4v5.2h-6.1v7.1h6.1v18.2H28.1z"/>
-		</svg>
-		</a>
-		&nbsp;
-
-		<a href="https://fi.linkedin.com/in/toni-kauppila" title="LinkedIn" target="_blank">
-		<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-
-		<g>
-			<g>
-				<path class="some" opacity="0.70" fill="white" d="M42.4,5.3H8.2c-1.6,0-3,1.3-3,2.9v34.3c0,1.6,1.3,2.9,3,2.9h34.2c1.6,0,3-1.3,3-2.9V8.2
-					C45.3,6.6,44,5.3,42.4,5.3z M17.1,39.5h-6V20.4h6V39.5z M14.1,17.8c-1.9,0-3.5-1.5-3.5-3.5c0-1.9,1.5-3.4,3.5-3.4
-					c1.9,0,3.4,1.5,3.4,3.4C17.6,16.2,16,17.8,14.1,17.8z M39.4,39.5h-5.9v-9.3c0-2.2,0-5.1-3.1-5.1c-3.1,0-3.6,2.4-3.6,4.9v9.5h-5.9
-					V20.4h5.7V23h0.1c0.8-1.5,2.7-3.1,5.6-3.1c6,0,7.1,4,7.1,9.1V39.5z"/>
-			</g>
-			<g>
-				<path class="some" opacity="0.70" fill="white" d="M47.5,38.8c0.2,0,0.3-0.1,0.3-0.3c0-0.2-0.1-0.3-0.4-0.3H47v1.1h0.2v-0.5h0.2l0,0l0.3,0.5h0.2L47.5,38.8
-					L47.5,38.8z M47.4,38.7h-0.2v-0.4h0.2c0.1,0,0.3,0,0.3,0.2C47.7,38.6,47.5,38.7,47.4,38.7z"/>
-				<path class="some" opacity="0.70" fill="white" d="M47.4,37.6c-0.6,0-1.1,0.5-1.1,1.1c0,0.6,0.5,1.1,1.1,1.1c0.6,0,1.1-0.5,1.1-1.1C48.4,38.1,48,37.6,47.4,37.6
-					z M47.4,39.6c-0.5,0-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9c0.5,0,0.9,0.4,0.9,0.9C48.3,39.2,47.9,39.6,47.4,39.6z"/>
-			</g>
-		</g>
-		</svg>
-		</a>
-		</div>
 	</div>
 </div>
 <!-- Contact modal ends -->
+	
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+	
+<script>
+	
+// Launch tippy
+tippy('[data-tippy-content]', {
+  offset: [0, 16],
+});
+	
+</script>
 	
 <script>
 // Get the modal
@@ -442,10 +397,10 @@ window.onclick = function(event) {
 /*Initiate AOS */
 AOS.init({
 
-	disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+//	disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
 	startEvent: 'DOMContentLoaded',
 	easing: 'ease-out-back',
-	duration: 700
+	duration: 500
 });
 	
 </script>

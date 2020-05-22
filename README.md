@@ -1,2 +1,2 @@
 # www.tonikauppila.com
-Personal portfolio
+My personal portfolio. Feel free to request changes if you notice something silly in the code!

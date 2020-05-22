@@ -1662,11 +1662,12 @@ header div {
 	
 .bg-parallax {
 	background-image: none;
+	display: none;
 }
 
 .bg {
-	background-image: url(../images/portraits/Toni_Kauppila_3.jpg);
-	background-position: top;
+	background-image:url(../images/portraits/Toni_Kauppila_3.jpg);
+	background-size: 555px;
 	position: relative;
 	transition: all 0.1s;
 }

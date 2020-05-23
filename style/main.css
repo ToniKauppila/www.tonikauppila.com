@@ -1490,6 +1490,13 @@ ul.breadcrumb:hover {
 .fp-content-picture-photos {
 	background-image: none;
 }
+	
+.slideshow-container, .dot, .prev, .next, .fp-content-picture-photos  {
+	display: none !important;
+	overflow: hidden !important;
+	width: 0!important;
+	height: 0 !important;
+}
 
 nav {
 	margin-right: 20px;

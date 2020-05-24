@@ -210,19 +210,6 @@
 	transition: ease 0.8s;
 }
 
-/*
-img:not(.initial) {
-	transition: opacity 0.4s ease-in-out;
-}
-img.initial,
-img.loaded,
-img.error {
-	opacity: 1;
-}
-img:not([src]) {
-	visibility: hidden;
-}
-*/
 
 /* Create four equal columns that sits next to each other */
 .column {
@@ -276,7 +263,7 @@ img:not([src]) {
 }
 
 .grid-gallery img:not(.initial) {
-	transition: opacity 0.7s;
+	transition: opacity 0.6s ease-in-out;
 }
 .grid-gallery img.initial,
 .grid-gallery img.loaded,

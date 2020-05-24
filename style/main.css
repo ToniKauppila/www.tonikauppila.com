@@ -835,6 +835,7 @@ input, textarea {
 	animation-name: animatetop;
 	animation-duration: 0.3s;
 	overflow: auto;
+	-webkit-backface-visibility: hidden;
 }
 
 @media screen and (max-height: 900px) {
@@ -864,7 +865,6 @@ input, textarea {
 	max-width: 90px;
 	max-height: 90px;
 }
-
 
 /* The Close Button */
 .close {
@@ -937,8 +937,6 @@ input, textarea {
 	top: 0;
 	width: 100%;
 }
-
-
 
 .go-down a {
   position: absolute;

@@ -1,6 +1,18 @@
 <!doctype html>
 <html lang="fi">
 <head>
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166881620-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166881620-1');
+</script>	
+	
+	
 <meta charset="utf-8">
 <title>Toni Kauppila | K-Kuitit</title>
 <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
@@ -119,10 +131,10 @@ data-aos-offset="0" data-aos-once="true" id="wrapper">
 			<h2>Backstory</h2>
 			
 		  <p>
-			The e-receipt service has been one of the most asked features in K-Ruoka's customer feedback for the past years. The outdated checkouts have postponed the developement, but in the summer of 2019 we got the change to develop a MVP of the service. 
+			The e-receipt service has been one of the most asked features in K-Ruoka's customer feedback for the past years. The outdated checkouts have postponed the development, but in the summer of 2019, we got the change to create a MVP of the service. 
 			</p>	
 			<p>	
-			It was decided that the service would be implemented with webview-technology inside K-Ruoka app. This would later give the chance to integrate it to K-Ruoka.fi and other services as well.
+			It was decided that the service would be implemented with WebView-technology inside K-Ruoka app. This would later give the chance to integrate it to K-Ruoka.fi and other services as well.
 		  </p>
 			
 			<hr>
@@ -158,24 +170,27 @@ data-aos-offset="0" data-aos-once="true" id="wrapper">
 			
 			<hr>
 			
-		  <h2>Problems</h2>
+			<img data-aos="fade-up" data-aos-easing="ease-in-out" 
+			data-aos-offset="100" data-aos-once="true" src="images/Physical_receipt.jpg" alt="Receipt">
 			
-			<p>The fundamental, validated user problem was that people want to find their personal receipts in a digital form.</p>
-
-			<p>Partly, this need came from a competitor’s service that has been running for many years. E-receipt service has become a hygiene feature that should be found from grocery store’s digital world.</p>
-
-			<p>The invitable fact is, that physical receipts get lost, scrunched and their ink slowly dissapears if they are not stored in a vacuum in a dark bank vault.</p> 
+			<h2>Problems</h2>
 			
-			<p>Here’s some of the sub-problems that occured when I started to dive deeper into the receipt-world:</p>
+			<p>Physical receipts get lost, scrunched and their ink slowly disappears if they are not stored in a vacuum.</p>
+				
+			<p>This initial problem has forced many brick and mortar companies to developed e-receipt services. Lately, they have become hygiene features that people expect to be found from companies' mobile apps and websites.</p>
+			
+			<p>E-receipt services are a good way to give something back to the loyalty customers and provide them with services that can help daily life.</p> 
+<!--
 
-		  <ul>
-				<li>How might we seamlessly integrate the webview-service to the native app?</li>
+			<ul>
+				<li>How might we seamlessly integrate the WebView-service to the native app?</li>
 				<li>Should the receipt be conventional looking or re-designed for digital platform?</li>
 				<li>What is the most efficient way to show the receipts in a list?</li>
 				<li>How should the warranty receipt look like?</li>
 				<li>How might people want to share their receipts?</li>
 				<li>How to guide users through the strong authentication?</li>
-		  </ul>
+			</ul>
+-->
 			
 		  <br>
 
@@ -202,7 +217,7 @@ data-aos-offset="0" data-aos-once="true" id="wrapper">
 			<p>I first started with pen and paper. I drew the basic structure of the service and tried out different approaches.</p> 
 
 
-			<p>After lightly validating the initial designs, I started making the high fidelity prototype. I shared the prototype internally, discussed it with the developers and iterated on the go. </p>
+			<p>After lightly validating the initial designs, I started making the high-fidelity prototype. I shared the prototype internally, discussed it with the developers and iterated on the go. </p>
 
 			<p>I wanted to make the somewhat simple service more interesting visually, so I added the balls from K-Plussa’s visual guidelines to bring in the Plussa-brand better up front to remind, that you could only get the receipts to the service by using your loyalty card.</p> 
 
@@ -219,7 +234,7 @@ data-aos-offset="0" data-aos-once="true" id="wrapper">
 		
 		  <hr>
 			
-		  <h2>Solutions to the problems</h2>
+		  <h2>Solutions</h2>
 			
 			
 		  <p>Here's some of the most important solutions and the problems behind them:</p>
@@ -286,7 +301,7 @@ data-aos-offset="0" data-aos-once="true" id="wrapper">
 
 				<p><font class="semi-bold">Problem:</font> How might we design a receipt for the digital world?</p>
 
-				<p><font class="semi-bold">Solution:</font> A more structured and visual receipt. We ended up using the frame and store logo from this design, but it was faster and easier to implement the receipt in the same form as it prints out in the brick and mortar store. People actually prefered the more simple, conventional version of the receipt.</p>
+				<p><font class="semi-bold">Solution:</font> A more structured and visual receipt. We ended up using the frame and store logo from this design, but it was faster and easier to implement the receipt in the same form as it prints out in the brick and mortar store. People prefered the more simple, conventional version of the receipt.</p>
 
 		    </div>
 			</div>
@@ -302,7 +317,7 @@ data-aos-offset="0" data-aos-once="true" id="wrapper">
 
 				<p><font class="semi-bold">Problem:</font> How might we design an appealing and informative warranty receipt?</p>
 
-				<p><font class="semi-bold">Solution:</font> A digital receipt with some charesteristics from the physical world, topped with the product image and store logo.</p>
+				<p><font class="semi-bold">Solution:</font> A digital receipt with some characteristics  from the physical world, topped with the product image and store logo.</p>
 
 			  </div>
 			</div>
@@ -327,7 +342,7 @@ data-aos-offset="0" data-aos-once="true" id="wrapper">
 			
 			<h2>Reflection</h2>
 			
-			<p>K-Kuitit was developed in a very agile way. We got a lot of positive feedback about the service when we launched it in January 2020, but the first version lacks some important features that will be implemented later on. I'm looking forward to get the time to test the updated version with our customer.</p>
+			<p>K-Kuitit was developed in a very agile way. We got a lot of positive feedback about the service when we launched it in January 2020, but the first version lacks some important features that will be implemented later on. I'm looking forward to getting the time to test the updated version with our customer.</p>
 			
 			<p>I’m happy to talk more about K-Kuitit in person, if you’re interested to work with me! If you have a K-Plussa membership, you can try out the service yourself by <a href="https://www.k-ruoka.fi/artikkelit/sovellus" target="blank">downloading K-Ruoka app</a>.</p>
 			

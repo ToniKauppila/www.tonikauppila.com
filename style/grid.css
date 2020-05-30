@@ -20,6 +20,10 @@
 
 }
 
+.min-height {
+	min-height: 370px;
+}
+
 @media (min-width: 600px) {
 	
 .container, .container-disabled {

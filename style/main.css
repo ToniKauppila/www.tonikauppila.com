@@ -1757,6 +1757,7 @@ header div {
 	z-index: 9999;
 	-webkit-backdrop-filter: blur(10px);
   	backdrop-filter: blur(10px); 
+	padding: env(safe-area-inset-bottom, 8px)
 }
 	
 .mobile-nav svg {

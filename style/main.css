@@ -169,6 +169,8 @@ mark {
 
 lottie-player {
 	--lottie-player-seeker-thumb-color: var(--active-color);
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 

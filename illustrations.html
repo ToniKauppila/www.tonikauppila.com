@@ -24,6 +24,7 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
 <body>
@@ -135,13 +136,17 @@
 			</div>
 			<div class="images-side-by-side">
 				<div class="fifty-percent-image-1">
-					<img  alt="K-Ruoka.fi payment method" src="images/illustrations/Maksukortti_etuvg.svg"  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-once="true">
+					<img  alt="K-Ruoka.fi payment method" src="images/illustrations/Maksukortti_etu.svg"  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-once="true">
 				</div>
 				<div class="fifty-percent-image-2">
 					<img  alt="K-Ruoka.fi payment method" src="images/illustrations/Maksukortti_taka.svg"  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-once="true">
 				</div>
 			</div>
 			<img data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-once="true" src="images/illustrations/Auto.svg" alt="K-Ruoka.fi auto" style="margin: 8px 0 0px 0;">
+			
+			
+			<lottie-player src="kuitti_animaatio.json" background="transparent"  speed="1"  style="max-width: 400px; width:100%; margin: auto;" loop controls autoplay ></lottie-player>
+			
 			<hr>
 			<h2>Other K-group related</h2>
 			<div class="images-side-by-side">
@@ -426,6 +431,16 @@ $(document).ready(function(){
 	$(".form-button").click(function(){
 		$(this).addClass("active");
 	});
+});
+</script>
+	
+<script>
+	lottie.loadAnimation({
+  container: 'lottie', // the dom element that will contain the animation
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'kuitti_animaatio.json' // the path to the animation json
 });
 </script>
 

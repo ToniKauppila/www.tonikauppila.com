@@ -167,6 +167,10 @@ mark {
 	background-color:var(--mark-color);
 }
 
+lottie-player {
+	--lottie-player-seeker-thumb-color: var(--active-color);
+}
+
 
 .desktop-hide {
 	display: none;

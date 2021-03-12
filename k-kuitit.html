@@ -342,7 +342,7 @@ data-aos-offset="0" data-aos-once="true" id="wrapper">
 			
 			<h2>Reflection</h2>
 			
-			<p>K-Kuitit was developed in a very agile way. We got a lot of positive feedback about the service when we launched it in January 2020, but the first version lacks some important features that will be implemented later on. I'm looking forward to getting the time to test the updated version with our customer.</p>
+			<p>K-Kuitit was developed in a very agile way. We got a lot of positive feedback about the service when we launched it in January <span id="year"></span>, but the first version lacks some important features that will be implemented later on. I'm looking forward to getting the time to test the updated version with our customer.</p>
 			
 			<p>I’m happy to talk more about K-Kuitit in person, if you’re interested to work with me! If you have a K-Plussa membership, you can try out the service yourself by <a href="https://www.k-ruoka.fi/artikkelit/sovellus" target="blank">downloading K-Ruoka app</a>.</p>
 			
@@ -476,7 +476,7 @@ data-aos-offset="0" data-aos-once="true" id="wrapper">
 	<div style="margin: auto; color: grey; text-align: center; padding-top:24px; font-size: 12px; line-height: 18px; width: 100%;">
 		
 	Desing and code by me<br>
-	&copy; Toni Kauppila 2020
+	&copy; Toni Kauppila <span id="year"></span>
 		
 	</div>
 </div>
@@ -536,6 +536,14 @@ data-aos-offset="0" data-aos-once="true" id="wrapper">
 	
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://unpkg.com/tippy.js@6"></script>
+
+<script>
+	new Date().getFullYear()
+// returns the current year
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
+</script>
 	
 <script>
 	

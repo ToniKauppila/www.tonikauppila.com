@@ -105,7 +105,7 @@ data-aos-offset="0" data-aos-once="true" id="wrapper">
 			<p style="font-weight:400">
 				<strong>Role</strong>: UX & Visual Designer<br>
 				<strong>Time</strong>: 2018 &#8250;<br>
-				<strong>Awards</strong>: <a href="https://grandone.fi/kilpailutyot/?palkinto=voittajat&kategoria=paras-datan-kaeyttoe-2019" target="_blank">Grand One 2020 - Best use of data</a><br>
+				<strong>Awards</strong>: <a href="https://grandone.fi/kilpailutyot/?palkinto=voittajat&kategoria=paras-datan-kaeyttoe-2019" target="_blank">Grand One <span id="year"></span> - Best use of data</a><br>
 				<strong>Tools</strong>:
 			</p>
 		  
@@ -193,7 +193,7 @@ data-aos-offset="0" data-aos-once="true" id="wrapper">
 			
 		  <h2>Problems</h2>
 			
-			<p>Nowadays people want to know the different effects that their actions have. According to <a href="https://kesko.fi/globalassets/pdf-tiedostot/ruokailmiot-k-ryhman-trendikatsaus-2020-sivut.pdf" target="_blank">study made by K-group</a>, conscious consumption will be the biggest trend that affects food choices in 2020.</p>
+			<p>Nowadays people want to know the different effects that their actions have. According to <a href="https://kesko.fi/globalassets/pdf-tiedostot/ruokailmiot-k-ryhman-trendikatsaus-<span id="year"></span>-sivut.pdf" target="_blank">study made by K-group</a>, conscious consumption will be the biggest trend that affects food choices in <span id="year"></span>.</p>
 			
 			<p>Most of us use technology to exploit data in our daily lives: we track our steps, heartrate, stress or  biking routes via rings, watches and smartphones. People really make changes in their lives with the help from data.</p>
 			
@@ -552,7 +552,7 @@ data-aos-offset="0" data-aos-once="true" id="wrapper">
 	<div style="margin: auto; color: grey; text-align: center; padding-top:24px; font-size: 12px; line-height: 18px; width: 100%;">
 		
 	Desing and code by me<br>
-	&copy; Toni Kauppila 2020
+	&copy; Toni Kauppila <span id="year"></span>
 		
 	</div>
 </div>
@@ -612,6 +612,14 @@ data-aos-offset="0" data-aos-once="true" id="wrapper">
 	
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://unpkg.com/tippy.js@6"></script>
+
+<script>
+	new Date().getFullYear()
+// returns the current year
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
+</script>
 	
 <script>
 	

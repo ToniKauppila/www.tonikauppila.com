@@ -1811,6 +1811,7 @@ header div {
 	background: #181818;
 	width: 100%;
 	display: block;
+	padding-bottom: env(safe-area-inset-bottom);
 }
 	
 .fp-content-picture, .fp-content-text, .fp-content-picture-photos {

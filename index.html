@@ -291,8 +291,8 @@ data-aos-offset="0" data-aos-once="true">
 				document.getElementById("form").submit();
 			  }
 			</script>
-			<form id="form" method="POST" data-email="example@email.net"
-			action="https://submit-form.com/qAaVp1W3">
+			<form id="form" action="https://submit-form.com/qAaVp1W3">
+				<input type="hidden" name="_redirect" value="false" />
 
 			<div class="form-elements">
 				<p>
@@ -302,9 +302,6 @@ data-aos-offset="0" data-aos-once="true">
 					<label for="name">Name </label>
 					<input type="text" id="name" name="name" placeholder="" />
 			  	</fieldset>
-
-				  <input type="hidden" name="_redirect" value="false" />
-
 				  
 				<fieldset class="form-item">
 					<label for="message">Message</label>
@@ -493,9 +490,6 @@ $(document).ready(function(){
 		$(this).addClass("active");
 	});
 });
-</script>
-
-<script data-cfasync="false" type="text/javascript" src="scripts/form-submission-handler.js">
 </script>
 
 </body>

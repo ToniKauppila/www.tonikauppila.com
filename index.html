@@ -285,8 +285,14 @@ data-aos-offset="0" data-aos-once="true">
     	<span class="close">&times;</span>
 		<div class="circle modal-image"></div>
 		<div>
-			<form class="gform" method="POST" data-email="example@email.net"
-			action="https://script.google.com/macros/s/AKfycbwit-64b6J77rmsnjBXxxwD8JucjOvtTAj-5X6TFA/exec">
+			<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+			<script>
+			  function onSubmit(token) {
+				document.getElementById("form").submit();
+			  }
+			</script>
+			<form id="form" method="POST" data-email="example@email.net"
+			action="https://submit-form.com/qAaVp1W3">
 
 			<div class="form-elements">
 				<p>
@@ -294,7 +300,7 @@ data-aos-offset="0" data-aos-once="true">
 				</p>
 				<fieldset class="form-item">
 					<label for="name">Name </label>
-					<input id="name" name="name" placeholder="" />
+					<input type="text" id="name" name="name" placeholder="" />
 			  	</fieldset>
 
 				<fieldset class="form-item">
@@ -309,12 +315,7 @@ data-aos-offset="0" data-aos-once="true">
 					required placeholder=""/>
 				</fieldset>
 
-				<fieldset class="pure-group honeypot-field">
-					<label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
-					<input id="honeypot" type="text" name="honeypot" value="" />
-				</fieldset>
-
-				<button class="form-button">
+				<button class="g-recaptcha form-button" data-sitekey="6Leuk5YaAAAAAMSYbU163rYicCsC0-XHYSpaL5Vp" data-callback='onSubmit' class="form-button">
 				Send
 				</button>
 			</div>

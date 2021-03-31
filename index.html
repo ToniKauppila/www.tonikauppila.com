@@ -35,6 +35,8 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <body style="background: transparent">
@@ -285,14 +287,8 @@ data-aos-offset="0" data-aos-once="true">
     	<span class="close">&times;</span>
 		<div class="circle modal-image"></div>
 		<div>
-			<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-			<script>
-			  function onSubmit(token) {
-				document.getElementById("form").submit();
-			  }
-			</script>
-			<form id="form" action="https://submit-form.com/qAaVp1W3">
-				<input type="hidden" name="_redirect" value="false" />
+			<form class="gform" method="POST" data-email="example@email.net"
+			action="https://script.google.com/macros/s/AKfycbwit-64b6J77rmsnjBXxxwD8JucjOvtTAj-5X6TFA/exec">
 
 			<div class="form-elements">
 				<p>
@@ -300,9 +296,9 @@ data-aos-offset="0" data-aos-once="true">
 				</p>
 				<fieldset class="form-item">
 					<label for="name">Name </label>
-					<input type="text" id="name" name="name" placeholder="" />
+					<input id="name" name="name" placeholder="" />
 			  	</fieldset>
-				  
+
 				<fieldset class="form-item">
 					<label for="message">Message</label>
 					<textarea id="message" name="message" rows="4"
@@ -315,13 +311,18 @@ data-aos-offset="0" data-aos-once="true">
 					required placeholder=""/>
 				</fieldset>
 
-				<button class="g-recaptcha form-button" data-sitekey="6Leuk5YaAAAAAMSYbU163rYicCsC0-XHYSpaL5Vp" data-callback='onSubmit' class="form-button">
+				<fieldset class="pure-group honeypot-field">
+					<label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+					<input id="honeypot" type="text" name="honeypot" value="" />
+				</fieldset>
+				<div class="g-recaptcha" data-sitekey="6Leuk5YaAAAAAMSYbU163rYicCsC0-XHYSpaL5Vp"></div>
+				<button type="submit" value="Submit" class="form-button">
 				Send
 				</button>
 			</div>
 			<div class="thankyou_message animated fadeIn" style="display:none;">
 				<h3>Thanks for your message! I'll get back to you as soon as I can.</h3>
-			</div>	
+			</div>
 		</form>
 	</div>
 	</div>
@@ -490,6 +491,9 @@ $(document).ready(function(){
 		$(this).addClass("active");
 	});
 });
+</script>
+
+<script data-cfasync="false" type="text/javascript" src="scripts/form-submission-handler.js">
 </script>
 
 </body>

@@ -433,6 +433,7 @@ hr::before {
 	padding-bottom: 8px;
 }
 
+
 .tools::-webkit-scrollbar {
 	display: none;}
 
@@ -844,6 +845,7 @@ input, textarea {
 	animation-name: animatetop;
 	animation-duration: 0.3s;
 	overflow: auto;
+	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 }
 

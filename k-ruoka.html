@@ -93,7 +93,7 @@
 <div class="top-spacer" style="background: #191919;"></div>
 
 <!-- Hero -->
-<div style="width: 100%; height: 100%; ">
+<div class="rellax" data-rellax-speed="-14" style="width: 100%; height: 100%; ">
 	<div class="hero">
 	  <div class="hero-logo">
 	  <img src="https://www.k-ruoka.fi/assets/27417/img/logo-kruoka.svg" alt="K-Ruoka">
@@ -106,9 +106,12 @@
 data-aos-offset="0" data-aos-once="true" id="wrapper">
 	
 	<!-- Header -->
-	<div style="width: 100%; height: auto; "></div>
+	<div style="width: 100%; height: 160px; background: rgb(255,255,255);
+	background: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%);
+	"></div>
+	<div style="width: 100%; height: auto; background-color: white; ">
 			<div style="text-align: left; max-width: 700px;margin: auto;padding: 24px; height: auto; position:relative">
-			<h1 style="font-size: 44px; line-height: 48px; margin-top:64px;">K-Ruoka</h1>	
+			<h1 style="font-size: 44px; line-height: 48px;">K-Ruoka</h1>	
 			<p style="font-weight:400">K-Ruoka is the biggest food media and a e-grocery store in Finland. It is is a home for over 8 000 recipes, countless articles and for four different chains: K-Supermarket, K-Citymarket, K-Market and Neste K. I was hired to unify the user experience and support the e-grocery store in the journey to become the best in Finland. 
 			</p>
 			
@@ -425,6 +428,17 @@ var currentScrollPos = window.pageYOffset;
 }
 
 </script>
+
+<script src="scripts/rellax.min.js"></script>
+	
+<script>
+	
+/* Initiate Rellax and LazyLoad */	
+var rellax = new Rellax('.rellax');
+	horizontal: false
+	
+</script>	
+	
 
 	
 <script>

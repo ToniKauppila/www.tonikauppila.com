@@ -300,6 +300,17 @@ p.intro {
 	
 /* STYLES FOR THE WORK SITE */
 
+.full-width-content {
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding: 64px 0 40px 0;
+}
+
+.full-width-content > .work-content {
+	padding: 32px 24px 0px 24px;
+}
+
 .hero { 
 	height: 80%; 
 	width: 100%;
@@ -308,7 +319,7 @@ p.intro {
     background-repeat: no-repeat;
     background-size: cover;
 	position: relative;
-	background-image: url(../images/K-Ruoka_hero.png);
+	background-image: url(../images/K-Ruoka_hero_3.png);
 }
 
 .team {
@@ -488,12 +499,6 @@ hr::before {
 .logos:hover .logo {
 	filter: none;
 }
-
-/*
-.logo:hover {
-	transform: scale(1.2)
-}
-*/
 
 .images-side-by-side {
 	display: flex;
@@ -1689,9 +1694,18 @@ header div {
 	transition: all 0.1s;
 }
 
+
 .hero {
 	background-size: 1440px;
 	background-position: top;
+}
+
+.full-width-content{
+	padding: 32px 0 16px 0;
+}
+
+.full-width-content > .work-content {
+	padding: 24px 24px 0px 24px;
 }
 	
 	

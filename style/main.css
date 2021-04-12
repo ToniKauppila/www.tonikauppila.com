@@ -250,26 +250,6 @@ p.intro {
 		font-weight: normal;
 	}
 
-
-/*
-	@-webkit-keyframes AnimationName {
-		0%{background-position:64% 0%}
-		50%{background-position:37% 100%}
-		100%{background-position:64% 0%}
-	}
-	@-moz-keyframes AnimationName {
-		0%{background-position:64% 0%}
-		50%{background-position:37% 100%}
-		100%{background-position:64% 0%}
-	}
-	@keyframes AnimationName { 
-		0%{background-position:64% 0%}
-		50%{background-position:37% 100%}
-		100%{background-position:64% 0%}
-	}
-*/
-
-
 	/* The dots/bullets/indicators */
 	.dot {
 		cursor: pointer;
@@ -317,7 +297,33 @@ p.intro {
 		filter: grayscale(0%);
 	}
 
+	
 /* STYLES FOR THE WORK SITE */
+
+.hero { 
+	height: 100%; 
+	width: 100%;
+	margin: auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+	position: relative;
+	background-image: url(../images/K-Ruoka_hero.jpg);
+}
+
+.hero-logo {
+	position: relative;
+	width: 100%;
+	padding-top: 130px;
+}
+
+.hero-logo > img {
+	margin: auto;
+	display: block;
+	max-width: 330px;
+	width: 80%;
+	box-sizing: border-box;
+}
 
 .team {
 	display: grid;
@@ -949,6 +955,7 @@ input, textarea {
 	width: 100%;
 }
 
+
 .go-down a {
   position: absolute;
   bottom: 80px;
@@ -1381,7 +1388,6 @@ svg:hover .some {
 
 #wrapper {
 	width:100%;
-   	min-height:100%;
    	position:relative;
 }
 
@@ -1695,6 +1701,13 @@ header div {
 	background-size: 555px;
 	position: relative;
 	transition: all 0.1s;
+}
+
+.hero {
+	background-image:url(../images/K-Ruoka_hero_mobile.jpg);
+	background-size: 110%;
+	position: relative;
+	background-position: -20px 90%;
 }
 	
 	

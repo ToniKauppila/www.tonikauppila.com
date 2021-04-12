@@ -301,28 +301,14 @@ p.intro {
 /* STYLES FOR THE WORK SITE */
 
 .hero { 
-	height: 100%; 
+	height: 70%; 
 	width: 100%;
 	margin: auto;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 	position: relative;
-	background-image: url(../images/K-Ruoka_hero.jpg);
-}
-
-.hero-logo {
-	position: relative;
-	width: 100%;
-	padding-top: 130px;
-}
-
-.hero-logo > img {
-	margin: auto;
-	display: block;
-	max-width: 330px;
-	width: 60%;
-	box-sizing: border-box;
+	background-image: url(../images/K-Ruoka_hero.png);
 }
 
 .team {
@@ -1704,10 +1690,6 @@ header div {
 }
 
 .hero {
-	background-image:url(../images/K-Ruoka_hero_mobile.jpg);
-	background-size: 110%;
-	position: relative;
-	background-position: -20px 90%;
 }
 	
 	

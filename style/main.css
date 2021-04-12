@@ -301,7 +301,7 @@ p.intro {
 /* STYLES FOR THE WORK SITE */
 
 .hero { 
-	height: 70%; 
+	height: 80%; 
 	width: 100%;
 	margin: auto;
     background-position: bottom;
@@ -1690,7 +1690,7 @@ header div {
 }
 
 .hero {
-	background-size: 1300px;
+	background-size: 1440px;
 	background-position: top;
 }
 	

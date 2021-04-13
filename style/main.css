@@ -314,15 +314,11 @@ p.intro {
 .hero { 
 	height: 80%; 
 	width: 100%;
-	margin: auto;
-	position: relative;
-	overflow: hidden;
+	overflow-y: hidden;
 }
 
 .hero > img {
 	width: 100%;
-	min-width: 1000px;
-	margin: auto;
 }
 
 .team {

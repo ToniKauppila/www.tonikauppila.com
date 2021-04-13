@@ -312,14 +312,14 @@ p.intro {
 }
 
 .hero { 
-	height: 80%; 
+	height: 700px; 
 	width: 100%;
 	margin: auto;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 	position: relative;
-	background-image: url(../images/K-Ruoka_hero_3.png);
+	background-image: url(../images/K-Ruoka_hero.png);
 }
 
 .team {

@@ -315,11 +315,14 @@ p.intro {
 	height: 80%; 
 	width: 100%;
 	margin: auto;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
 	position: relative;
-	background-image: url(../images/K-Ruoka_hero.png);
+	overflow: hidden;
+}
+
+.hero > img {
+	width: 100%;
+	min-width: 1000px;
+	margin: auto;
 }
 
 .team {
@@ -1695,9 +1698,8 @@ header div {
 }
 
 
-.hero {
-	background-size: 1100px;
-	background-position: top;
+.hero > img {
+
 }
 
 .full-width-content{

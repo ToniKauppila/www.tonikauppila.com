@@ -312,7 +312,7 @@ p.intro {
 }
 
 .hero { 
-	height: 700px; 
+	height: 80%; 
 	width: 100%;
 	margin: auto;
     background-position: bottom;

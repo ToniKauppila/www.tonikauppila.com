@@ -232,10 +232,8 @@ p.intro {
 
 	}
 
-	/* On hover, add a black background color with a little bit see-through */
-	.prev:hover, .next:hover {
 
-	}
+
 
 	/* Caption text */
 	.text {
@@ -1317,7 +1315,6 @@ svg:hover .some {
 .nav-60-left {
 	width: 70%;
 	float: left;
-	display: inline-block;
 	height: 64px;
 	vertical-align: middle;
 }

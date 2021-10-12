@@ -12,4 +12,36 @@ var animation = bodymovin.loadAnimation({
     loop: true,
     autoplay: true,
     path: 'totoro.json' // the path to the animation json
+  });
+
+    var animation = bodymovin.loadAnimation({
+    container: document.getElementById('lottie3'), // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'Tech_Radar_web.json' // the path to the animation json
   });   
+
+      var animation = bodymovin.loadAnimation({
+    container: document.getElementById('lottie4'), // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'Tech_Radar_mobile.json' // the path to the animation json
+  }); 
+
+        var animation = bodymovin.loadAnimation({
+    container: document.getElementById('lottie5'), // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'Tech_Radar_AI.json' // the path to the animation json
+  });    
+
+          var animation = bodymovin.loadAnimation({
+    container: document.getElementById('lottie6'), // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'Tech_Radar_Project.json' // the path to the animation json
+  });    

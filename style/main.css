@@ -330,7 +330,7 @@ p.intro {
 }
 
 .hero { 
-	height: 80%;
+	height: 60%;
 	width: 100%;
 	background-image: url("/images/K-Ruoka_hero.png");
 	background-repeat: no-repeat;
@@ -1713,7 +1713,6 @@ header div {
 
 .hero {
 	background-size: 1000px;
-	height: 630px;
 
 }
 

@@ -14,6 +14,11 @@
 	--background-opacity: #191919E6;
 }
 
+/* Handle */
+.photos::-webkit-scrollbar-thumb {
+	background: #121212;
+	}
+
 /* Filters */
 .grayscale {
 	filter: grayscale(100%);

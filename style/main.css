@@ -14,11 +14,11 @@
 	--background-opacity: #191919E6;
 }
 
+/* Dark scrollbar to Photos */
 .photos::-webkit-scrollbar {
 	width: auto;
   }
 
-/* Track */
 .photos::-webkit-scrollbar-track {
 	background: var(--background);
 	}
@@ -29,7 +29,6 @@
 	border: 4px solid var(--background);
 	}
 
-/* Handle on hover */
 .photos::-webkit-scrollbar-thumb:hover {
 	background: #555; 
   }

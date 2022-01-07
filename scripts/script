@@ -44,4 +44,12 @@ var animation = bodymovin.loadAnimation({
     loop: true,
     autoplay: true,
     path: 'Tech_Radar_Project.json' // the path to the animation json
-  });    
+  });   
+
+            var animation = bodymovin.loadAnimation({
+    container: document.getElementById('lottie7'), // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'Nightingale_All_Animations.json' // the path to the animation json
+  });     

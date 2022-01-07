@@ -948,7 +948,7 @@ input, textarea {
 	writing-mode: vertical-lr;
 	text-orientation: sideways;
 	text-align: center;
-	color:rgba(255,255,255,0.4);
+	color:rgba(255,255,255,0.6);
 	transform: rotate(180deg);
 	font-size: 12px;
 	letter-spacing: 1px;

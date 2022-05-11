@@ -15,7 +15,7 @@
   transition: .2s ease-in-out;
   box-shadow:  0px 4px 12px 0px rgba(0, 0, 0, 0.1);  
   border-radius: 18px;
-  margin-top: 24px;
+  margin-top: 32px;
   background: white;
 
 }
@@ -155,13 +155,13 @@
 	line-height: 28px;
 	padding: 0px;
 	margin: 0;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 .description-text p {
 	font-size: 16px;
 	line-height: 22px;
-	margin: 8px 0 0 0;
+	margin: 10px 0 0 0;
 	color: #333;
 }
 
@@ -191,7 +191,7 @@
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
-    padding: 0 12px;
+    padding: 0 16px;
 	margin-bottom: 16px;
 }
 
@@ -220,14 +220,14 @@
     -ms-flex: 33.3%; /* IE10 */
     flex: 33.3%;
     max-width: 33.3%;
-    padding: 0 12px;
+    padding: 0 16px;
 }
 
 .column-work {
     -ms-flex: 33.33%; /* IE10 */
     flex:33.33%;
 	 max-width: 33.33%;
-    padding: 0 12px;
+    padding: 0 16px;
 }
 
 
@@ -249,7 +249,7 @@
 .grid-container {
 	width: 100%;
 	max-width: 1200px;
-	padding: 24px;
+	padding: 24ppx;
 	box-sizing: border-box;
 	margin: auto;
 }
@@ -368,6 +368,11 @@
 	flex: 100%;
 	max-width: 100%;
 	margin: 0;
+	padding: 8px;
+}
+
+.container {
+	margin-top: 16px;
 }
 	
 .overflow-row .column-third {

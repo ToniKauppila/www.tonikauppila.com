@@ -498,7 +498,8 @@ hr::before {
 
 .referenses {
 	max-width: 900px;
-	margin: 32px 24px 40px 24px;
+	margin: 32px auto 40px auto;
+	padding: 0 24px 0 24px;
 }
 
 .referenses p {

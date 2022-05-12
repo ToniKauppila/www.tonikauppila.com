@@ -207,6 +207,69 @@ p.intro {
 
 }
 
+/* QUOTE STYLES */
+
+#more {display: none; transition: ease 0.8s;}
+
+
+.quote-wrapper {
+	max-width: 700px;
+	margin: auto;
+	height: auto;
+	padding-bottom: 64px;
+  }
+
+/* Quote container */
+.quote-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	width: 100%;
+	flex-direction: column;
+  }
+  
+  /* Quotes */
+  .myQuotes {
+	display: block;
+	margin: 0px 24px 0px 24px;
+	text-align: left;
+	margin-bottom: 32px;
+	padding-bottom: 8px;
+	border-bottom: solid 1px #dddddd;
+  }
+
+  .quote-person {
+	display: flex;
+	margin: auto;
+	justify-content: start;
+	align-items: center;
+	align-content: center;
+	flex-direction: row;
+	margin: 16px 0 16px 0;
+	}
+
+	.quote-img {
+		width: 64px;
+		min-width: 64px;
+		height: 64px;
+		min-height: 64px;
+		margin-right: 16px;
+		background-size: cover;
+		background-position: center;
+		border-radius: 50%;
+		box-sizing: border-box;
+		border: solid #292929 2px;
+	}
+  
+  /* Add a background color to the active dot/circle */
+  .quote-active, .quote-dot:hover {
+	background-color: #717171;
+  }
+  
+  /* Add a blue color to the author */
+  .author {color: var(--text-color); margin: 0; font-weight: 500;}
 
 
 /* CAROUSEL STYLES */
@@ -497,15 +560,10 @@ hr::before {
 }
 
 .referenses {
-	max-width: 900px;
 	margin: 32px auto 40px auto;
 	padding: 0 24px 0 24px;
 }
 
-.referenses p {
-	max-width: 400px;
-	margin: auto;
-}
 
 .logos {
 	width: 100%;
@@ -516,7 +574,6 @@ hr::before {
 	flex-direction: row;
 	flex-wrap: wrap;
 	text-align: center;
-	max-width: 900px;
 	margin: auto;
 	padding-bottom: 40px;
 	transition: .2s;
@@ -1488,33 +1545,6 @@ svg:hover .some {
   opacity: 1;
 }
 
-
-/* BACK TO TOP ICON */
-#myBtn {
-	display: none;
-	position: fixed;
-	bottom: 60px;
-	right: 60px;
-	z-index: 9997;
-	font-size: 16px;
-	border: none;
-	outline: none;
-	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-	background: rgba(15,15,15,0.9);
-	-webkit-backdrop-filter: blur(10px);
-  	backdrop-filter: blur(10px); 
-	color: white;
-	cursor: pointer;
-	width: 45px;
-	height: 45px;
-	border-radius: 100%;
-	transition: .2s;
-	-webkit-transition: .2s;
-}
-
-#myBtn:hover {
-  background: rgba(15,15,15,0.5);
-}
 
 /* Breadcrumb */
 ul.breadcrumb {

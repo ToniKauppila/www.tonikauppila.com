@@ -209,9 +209,6 @@ p.intro {
 
 /* QUOTE STYLES */
 
-#more {display: none; transition: ease 0.8s;}
-
-
 .quote-wrapper {
 	max-width: 700px;
 	margin: auto;

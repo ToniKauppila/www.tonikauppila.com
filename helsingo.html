@@ -422,26 +422,6 @@ var currentScrollPos = window.pageYOffset;
 }
 
 </script>
-
-<script src="scripts/rellax.min.js"></script>
-	
-<script>
-	
-/* Initiate Rellax and LazyLoad */	
-var rellax = new Rellax('.rellax');
-	horizontal: false
-	
-function destroyRellax(x) {
-  if (x.matches) { // If media query matches
-    rellax.destroy();
-  } 
-}
-
-var x = window.matchMedia("(max-width: 600px)")
-destroyRellax(x) // Call listener function at run time
-x.addListener(destroyRellax) // Attach listener function on state changes
-	
-</script>	
 	
 <script>
 	

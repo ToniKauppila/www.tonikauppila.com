@@ -378,6 +378,33 @@ p.intro {
 	
 /* STYLES FOR THE WORK SITE */
 
+.helsingo-hero {
+	width: 100%;
+	background-color: #DCD8D5;
+	background: linear-gradient(271deg, #f3f2f1, #c5beb9);
+    background-size: 400% 400%;
+
+    -webkit-animation: Helsingo 26s ease infinite;
+    -moz-animation: Helsingo 26s ease infinite;
+    animation: Helsingo 26s ease infinite;
+}
+
+@-webkit-keyframes Helsingo {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-moz-keyframes Helsingo {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@keyframes Helsingo {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+
 .video-container {
     overflow: hidden;
     position: relative;

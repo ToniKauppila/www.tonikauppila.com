@@ -381,6 +381,11 @@ p.intro {
 	
 /* STYLES FOR THE WORK SITE */
 
+.aava-hero {
+	width: 100%;
+	background-color: #F0F9FF;
+}
+
 .helsingo-hero {
 	width: 100%;
 	background-color: #DCD8D5;
@@ -439,7 +444,7 @@ p.intro {
 	padding: 32px 24px 0px 24px;
 }
 
-.hero { 
+.k-ruoka-hero { 
 	height: 60%;
 	width: 100%;
 	background-image: url("/images/K-Ruoka_hero.png");

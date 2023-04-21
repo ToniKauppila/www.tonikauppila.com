@@ -279,7 +279,7 @@
 }
 
 .grid-gallery img:not(.initial) {
-	transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
 }
 
 .grid-gallery img.initial,

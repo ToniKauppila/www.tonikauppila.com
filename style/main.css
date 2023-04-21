@@ -1083,7 +1083,7 @@ input, textarea {
 }
 
 .bg-parallax { 
-	/* background-image: url("../images/portraits/Toni_Kauppila_2.png"); */
+	background-image: url("../images/portraits/Toni_Kauppila_2.png");
 	background-size: cover;
 	height: 100%;
 	width: 100%;
@@ -1096,7 +1096,7 @@ input, textarea {
 
 
 .bg { 
-    /* background-image: url("../images/portraits/Toni_Kauppila_1.png"); */
+    background-image: url("../images/portraits/Toni_Kauppila_1.png");
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;

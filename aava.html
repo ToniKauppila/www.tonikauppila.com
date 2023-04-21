@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166881620-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166881620-1');
+</script>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="theme-color" content="#121212">
+	<title>Toni Kauppila | Aava mobile app</title>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+	<meta name="Toni Kauppila - UX & Visual Designer" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<link rel="stylesheet" type="text/css" href="style/animate.css">
+	<link rel="stylesheet" type="text/css" href="style/grid.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Fjalla+One" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<!-- Mobile nav starts -->
+<nav class="mobile-nav">
+	<div class="mobile-nav-content">
+		<a href="index" class="white-link">
+			<svg id="Home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.5,11v8.79a.72.72,0,0,1-.79.67H15a.76.76,0,0,1-.79-.67V15a.72.72,0,0,0-.79-.67H10.59A.72.72,0,0,0,9.8,15c.07,1.12.07,3.57.07,4.77a.72.72,0,0,1-.79.67H4.22a.7.7,0,0,1-.72-.67V11a.7.7,0,0,1,.2-.45l7.81-6.92a.54.54,0,0,1,.79,0l7.87,6.85A.54.54,0,0,1,20.5,11Z" style="fill:none;stroke:#fff;stroke-miterlimit:10"/></svg>
+			<br>
+			Home
+		</a>
+	</div>
+	<div class="mobile-nav-content">
+		<a href="work" style="color: var(--hover-color);">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="Work"><path d="M22.25,18.94H1.8a.78.78,0,0,1-.8-.71v-.29H23v.29C23.05,18.66,22.67,18.94,22.25,18.94Z" style="fill:#69E4FF"/><path d="M4,5.06H20a1,1,0,0,1,1,1V16.43a0,0,0,0,1,0,0H3a0,0,0,0,1,0,0V6.06A1,1,0,0,1,4,5.06Z" style="fill:none;stroke:#69E4FF;stroke-miterlimit:10"/></g></svg>
+			<br>
+			Work
+		</a>
+	</div>
+	<div class="mobile-nav-content">
+		<a href="photos" class="white-link">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="Photos"><path d="M20.9,19,3.08,19a.58.58,0,0,1-.58-.65l0-12.66A.58.58,0,0,1,3.1,5L20.92,5a.58.58,0,0,1,.58.65l0,12.6A.64.64,0,0,1,20.9,19Z" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><circle cx="12" cy="12.04" r="3.92" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><path d="M19.43,7.42h-.86c-.34,0-.57-.16-.57-.41V6.84c0-.25.23-.42.57-.42h.86c.34,0,.57.17.57.42v.21C20,7.26,19.72,7.42,19.43,7.42Z" style="fill:#fff"/></g></svg>
+			<br>
+			Photos
+		</a>
+	</div>
+	<div class="mobile-nav-content">
+		<a id="modalBtnMobile" class="white-link">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="Contact"><path d="M20.92,19H3.08a.59.59,0,0,1-.58-.66V5.65A.58.58,0,0,1,3.08,5H20.92a.58.58,0,0,1,.58.65V18.34A.59.59,0,0,1,20.92,19Z" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><path d="M2.62,5.19l8.65,8.75a1,1,0,0,0,1.46,0l8.65-8.75" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><line x1="9.49" y1="12.13" x2="2.62" y2="19" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><line x1="21.38" y1="19" x2="14.51" y2="12.13" style="fill:none;stroke:#fff;stroke-miterlimit:10"/></g></svg>
+			<br>
+			Contact
+		</a>
+	</div>
+</nav>
+<!-- Mobile nav ends -->
+
+<!-- Desktop nav starts -->
+<nav id="navbar">
+	<div class="nav-wrapper">
+	<div class="nav-60-left">
+		<div class="title"><a class="white-link" href="index">Toni Kauppila</a></div>
+	</div>
+	<div class="nav-40-right">	
+	<div class="nav-content">
+		<a href="work" style="color: var(--hover-color);">
+			<div class="nav-content-active"><div class="nav-content-active-blur"></div></div>
+			Work
+		</a>
+	</div>
+	<div class="nav-content">
+		<a href="photos" class="white-link">
+			
+			Photos
+		</a>
+	</div>
+	<div class="nav-content">
+		<a id="modalBtn" class="white-link">
+			<div class="secondary-button">Contact</div>
+		</a>
+	</div>
+	</div>
+	</div>
+</nav>
+<!-- Desktop nav ends -->
+	
+<div class="top-spacer" style="background: #DCD8D5;"></div>
+<div id="wrapper" data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-once="true">
+
+	<!-- Header -->
+	<div class="aava-hero">
+		<div style="text-align: left;max-width: 1000px; margin: auto;"><img style="width: 100%; display: block;" src="images/Aava/Aava_hero.jpg	" alt="A.S. Helsingö">
+		</div>
+	</div>
+		
+	<div style="width: 100%; height: auto; background-color: white; ">
+			<div style="text-align: left; max-width: 700px;margin: auto; padding: 40px 24px 24px 24px; height: auto; position:relative">
+			<h1 style="font-size: 44px; line-height: 48px;"><img style="width: 280px;" src="images/logos/Helsingo_logo.svg"></h1>	
+			<p style="font-weight:400">I helped A.S.Helsingö to visualise their new ecological paint products. The fairly short design gig produced a solid concept, from which the folks from Helsingö created a premium paint product to their catalogue.</p>
+
+			<p style="font-weight:400">My colleagues <a href="https://fi.linkedin.com/in/hugoalte" target="_blank">Hugo D’Alte</a> and <a href="https://www.linkedin.com/in/jerome-bodin" target="_blank">Jérôme Bodin</a> had made the initial website concept for Helsingö, so I had lots of building blocks from the get go. However, I didn’t have any paint colours, names, texts nor any other specific details about the paints so I had the permission to get creative with the designs.
+			</p>
+
+			<p style="font-weight:400">The final product ended up using quite a lot from our design and can be seen at <a href="https://helsingo.com/pages/milieu-home" target="_blank">Helsingö's website</a>.</p>
+			
+			<p style="font-weight:400">
+				<strong>Role</strong>: Visual & Concept Designer<br>
+				<strong>Time</strong>: 4–5 / 2021<br>
+				<strong>Tools</strong>:
+			</p>
+		
+
+			<div class="tools">
+				<img data-tippy-content="Figma" rel="tooltip" src="images/app-icons/figma.svg" alt="Figma">
+				<img data-tippy-content="Adobe Illustrator" rel="tooltip" src="images/app-icons/illustrator-symbol.svg" alt="Adobe Illustrator">
+				<img data-tippy-content="Adobe Photoshop" rel="tooltip" src="images/app-icons/photoshop-symbol.svg" alt="Adobe Photoshop">
+			</div>
+		</div>
+	</div>
+	<!-- Header end -->
+	
+
+
+	<!-- Content -->
+	<div>
+
+		<!-- Full width area -->
+		<div class="full-width-content" style="background-color: #fff; padding-bottom: 64px;">
+
+			<img data-aos="fade-up" data-aos-easing="ease-in-out" 
+			data-aos-offset="100" data-aos-once="true" src="images/Helsingo/Front_page.png" alt="Exibition" style="z-index: 1; margin: auto; max-width: 1200px; display: block; width: 90%; border-radius: 18px; filter: drop-shadow(0px 16px 80px rgba(0, 0, 0, 0.15));">
+
+			<div class="work-content" style="text-align: center;">
+			<h2>Paints front page</h2>
+			
+			<p>The paints front page was designed to emphasise the unique selling points and premium brand with quality images and video. Although we didn’t have any assets of the paints back then, I suggested that a visually appealing video could be used to promote the new paints. Later on, Helsingö crew made it happen and it can be seen on the <a href="https://helsingo.com/pages/milieu-home" target="_blank">paints front page</a>.</p>
+			</div>
+
+		</div>
+		<!-- Full width area end -->
+
+		<!-- Full width area -->
+		<div class="full-width-content" style="background-color: #DCD8D5; padding-bottom: 64px;">
+			
+			<img data-aos="fade-up" data-aos-easing="ease-in-out" 
+			data-aos-offset="100" data-aos-once="true" src="images/Helsingo/Catalog.png" alt="Exibition" style="margin: auto; max-width: 1200px; display: block; width: 90%; border-radius: 18px; filter: drop-shadow(0px 16px 80px rgba(0, 0, 0, 0.15));">
+
+
+			<div class="work-content" style="text-align: center;">
+			<h2>Catalogue</h2>
+			<p>I tried out many approaches for the representation of the actual products. I benchmarked lots of premium paint shops and ended up using a wall texture with slight rough details.</p>
+
+			<p>It was already decided that the paints would come in aluminium cans instead of traditional plastic buckets. I photoshopped a can to match Helsingö’s brand to visualise the idea and made an hover interaction for the paint items in order to instantly have another view of the paint.</p>
+
+			<p>Customers could also order A4 samples to get a better idea of the colour, so I added the ability to add the samples to the cart from the list items.</p>
+			</div>
+
+		</div>
+		<!-- Full width area end -->
+
+		<!-- Full width area -->
+		<div class="full-width-content">
+
+			<img data-aos="fade-up" data-aos-easing="ease-in-out" 
+			data-aos-offset="100" data-aos-once="true" src="images/Helsingo/Product_Page.png" alt="Exibition" style="margin: auto; max-width: 1200px; display: block; width: 90%; border-radius: 18px; filter: drop-shadow(0px 16px 80px rgba(0, 0, 0, 0.15));">
+
+			<div class="work-content" style="text-align: center; margin-bottom: 72px;">
+				<h2>Product page</h2>
+				<p>The product page consists of different representations of the paint and details about the product. I also designed a social feed that shows the paint on people's walls and a cross sell section for the painting supplies.</p>
+			</div>
+
+			<img data-aos="fade-up" data-aos-easing="ease-in-out" 
+			data-aos-offset="100" data-aos-once="true" src="images/Helsingo/Product_Page_2.png" alt="Exibition" style="margin: auto; max-width: 1200px; display: block; width: 90%; border-radius: 18px; filter: drop-shadow(0px 16px 80px rgba(0, 0, 0, 0.15));">
+			
+			<div class="work-content" style="text-align: center; margin-bottom: 64px;">
+				<h2>Paint calculator</h2>
+				<p>A calculator was also needed to be able to order the right amount of paint and thus saving money and waste.</p>
+			</div>
+
+			<div style="width: 90%; margin: auto; text-align:center; filter: drop-shadow(0px 16px 80px rgba(0, 0, 0, 0.15)); margin-bottom: 40px;">
+				<video data-aos="fade-up" data-aos-easing="ease-in-out" 
+				data-aos-offset="0" data-aos-once="true" autoplay loop playsinline muted width="100%" style="max-width: 1200px; width: 100%; margin: auto; border-radius: 18px;">
+					<source src="images/Helsingo/Paint_quantity.mov" type="video/mp4">
+					Your browser does not support HTML5 video.
+				</video>
+			</div>
+
+		</div>
+		<!-- Full width area end -->
+
+		<div class="full-width-content" style="background-color: #DCD8D5; padding-bottom: 64px;">
+
+			<div class="work-content" style="max-width: 900px;">
+				<div class="images-side-by-side">
+					<div class="fifty-percent-image-1">
+						<video data-aos="fade-up" data-aos-easing="ease-in-out" 
+						data-aos-offset="0" data-aos-once="true" autoplay loop playsinline muted width="100%" style="max-width: 1200px; width: 100%; margin: auto; border-radius: 18px;">
+							<source src="images/Helsingo/Full_screen_palette.mov" type="video/mp4">
+							Your browser does not support HTML5 video.
+						</video>
+					</div>
+					<div class="fifty-percent-image-2">
+
+						<h2>Full screen palette</h2>
+
+						<p>As an extra feature, I designed a full screen palette to make it possible to see the paint colours in full screen. The idea is to be able to try the colour next to a wall with a phone or tablet. Obviously the colours will be slightly different on different screens, so the tone wouldn't be as perfect as with the A4 samples.</p>
+							
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="read-more-background">
+		<div class="read-more">
+		<h2 style="margin-bottom: 10px; margin-top: 64px;">Read more?</h2>
+			<div class="overflow-row" style="margin-bottom: 16px;">
+				<div class="column-third">
+					<a href="k-ruoka">
+						<div class="container min-height">
+						<div class="container-image" style="background-image:url(images/K-Ruoka_hero.png); margin: 0; padding: 0; width: 100%; background-size: cover; border-top-left-radius: 18px; border-top-right-radius: 18px;" alt="K-Ostokset"></div>
+						<div class="gradient">
+							<div class="description-text">
+							<h1>K-Ruoka</h1>
+							<p>The biggest food media and online grocery store in Finland</p>
+							</div>
+						</div>
+						</div>
+					</a>
+				</div>
+				<div class="column-third">
+					<a href="k-kuitit">
+						<div class="container min-height">
+						<div class="container-image" style="background-image:url(images/K-Kuitit_mock_up.png);" alt="K-Ostokset"></div>
+						<div class="gradient">
+							<div class="description-text">
+							<h1>K-Kuitit</h1>
+							<p>Branding K-group's Artificial Intelligence</p>
+							</div>
+						</div>
+						</div>
+					</a>
+				</div>
+				<div class="column-third">
+					<a href="k-ai">
+						<div class="container min-height">
+						<div class="container-image" style="background-image:url(images/logos/K-AI_logo_square.png); background-size: cover; width: 100%; border-top-left-radius: 18px; border-top-right-radius: 18px;" alt="K-Ostokset"></div>
+							<div class="gradient">
+								<div class="description-text">
+								<h1>Case K-AI</h1>
+								<p>Branding K-group's Artificial Intelligence</p>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- Footer starts -->
+<div class="footer">
+	<div class="footer-wrapper">
+		<div class="footer-image">
+			<div data-tippy-content="Yep, that's me!" rel="tooltip" class="circle"></div>
+		</div>
+		<div class="footer-content">
+			<h3>Toni Kauppila</h3>
+			<h4>UX & Visual Designer</h4>
+		</div>
+	</div>
+	<!-- <div class="secondary-button">
+		<a class="white-link" href="" download>Download resume</a>
+	</div> -->
+	<div class="fp-social-media">
+		<a href="https://www.instagram.com/kauppilantoni/" title="Instagram" target="_blank">
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
+		viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+		<g>
+			<path class="some" opacity="0.70" fill="white"  d="M25,8.9c5.3,0,6,0,8.1,0.1c2,0.1,3,0.4,3.7,0.7c0.9,0.4,1.6,0.8,2.3,1.5c0.7,0.7,1.1,1.4,1.5,2.3
+				c0.3,0.7,0.6,1.8,0.7,3.7c0.1,2.1,0.1,2.7,0.1,8.1s0,6-0.1,8.1c-0.1,2-0.4,3-0.7,3.7c-0.4,0.9-0.8,1.6-1.5,2.3
+				c-0.7,0.7-1.4,1.1-2.3,1.5c-0.7,0.3-1.8,0.6-3.7,0.7c-2.1,0.1-2.7,0.1-8.1,0.1s-6,0-8.1-0.1c-2-0.1-3-0.4-3.7-0.7
+				c-0.9-0.4-1.6-0.8-2.3-1.5C10.2,38.6,9.8,38,9.4,37c-0.3-0.7-0.6-1.8-0.7-3.7c-0.1-2.1-0.1-2.7-0.1-8.1s0-6,0.1-8.1
+				c0.1-2,0.4-3,0.7-3.7c0.4-0.9,0.8-1.6,1.5-2.3c0.7-0.7,1.4-1.1,2.3-1.5C13.9,9.4,15,9.1,16.9,9C19,8.9,19.7,8.9,25,8.9 M25,5.2
+				c-5.4,0-6.1,0-8.2,0.1c-2.1,0.1-3.6,0.4-4.9,0.9c-1.3,0.5-2.4,1.2-3.5,2.3C7.2,9.7,6.6,10.8,6,12.1c-0.5,1.3-0.8,2.7-0.9,4.9
+				C5,19.1,5,19.8,5,25.2c0,5.4,0,6.1,0.1,8.2c0.1,2.1,0.4,3.6,0.9,4.9c0.5,1.3,1.2,2.4,2.3,3.5c1.1,1.1,2.2,1.8,3.5,2.3
+				c1.3,0.5,2.7,0.8,4.9,0.9c2.1,0.1,2.8,0.1,8.2,0.1s6.1,0,8.2-0.1c2.1-0.1,3.6-0.4,4.9-0.9c1.3-0.5,2.4-1.2,3.5-2.3
+				c1.1-1.1,1.8-2.2,2.3-3.5c0.5-1.3,0.8-2.7,0.9-4.9c0.1-2.1,0.1-2.8,0.1-8.2s0-6.1-0.1-8.2c-0.1-2.1-0.4-3.6-0.9-4.9
+				c-0.5-1.3-1.2-2.4-2.3-3.5c-1.1-1.1-2.2-1.8-3.5-2.3c-1.3-0.5-2.7-0.8-4.9-0.9C31.1,5.3,30.4,5.2,25,5.2L25,5.2z"/>
+			<path class="some" opacity="0.70" fill="white" d="M25,15c-5.7,0-10.3,4.6-10.3,10.3S19.3,35.5,25,35.5s10.3-4.6,10.3-10.3S30.7,15,25,15z M25,31.9
+				c-3.7,0-6.7-3-6.7-6.7c0-3.7,3-6.7,6.7-6.7c3.7,0,6.7,3,6.7,6.7C31.7,28.9,28.7,31.9,25,31.9z"/>
+			<circle class="some" opacity="0.70" fill="white"  cx="35.7" cy="14.6" r="2.4"/>
+		</g>
+		</svg>
+		</a>
+		&nbsp;
+		<a href="https://www.facebook.com/Thoun" title="Facebook" target="_blank">
+		<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
+			 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+
+		<path opacity="0.70" fill="white" class="some" d="M28.1,45.1V26.9h6.1l0.9-7.1h-7v-4.5c0-2,0.6-3.4,3.5-3.4l3.7,0V5.5c-0.6-0.1-2.9-0.3-5.5-0.3
+			c-5.4,0-9.1,3.3-9.1,9.4v5.2h-6.1v7.1h6.1v18.2H28.1z"/>
+		</svg>
+		</a>
+		&nbsp;
+		
+		<a href="https://fi.linkedin.com/in/toni-kauppila" title="LinkedIn" target="_blank">
+		<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+
+		<g>
+			<g>
+				<path class="some" opacity="0.70" fill="white" d="M42.4,5.3H8.2c-1.6,0-3,1.3-3,2.9v34.3c0,1.6,1.3,2.9,3,2.9h34.2c1.6,0,3-1.3,3-2.9V8.2
+					C45.3,6.6,44,5.3,42.4,5.3z M17.1,39.5h-6V20.4h6V39.5z M14.1,17.8c-1.9,0-3.5-1.5-3.5-3.5c0-1.9,1.5-3.4,3.5-3.4
+					c1.9,0,3.4,1.5,3.4,3.4C17.6,16.2,16,17.8,14.1,17.8z M39.4,39.5h-5.9v-9.3c0-2.2,0-5.1-3.1-5.1c-3.1,0-3.6,2.4-3.6,4.9v9.5h-5.9
+					V20.4h5.7V23h0.1c0.8-1.5,2.7-3.1,5.6-3.1c6,0,7.1,4,7.1,9.1V39.5z"/>
+			</g>
+			<g>
+				<path class="some" opacity="0.70" fill="white" d="M47.5,38.8c0.2,0,0.3-0.1,0.3-0.3c0-0.2-0.1-0.3-0.4-0.3H47v1.1h0.2v-0.5h0.2l0,0l0.3,0.5h0.2L47.5,38.8
+					L47.5,38.8z M47.4,38.7h-0.2v-0.4h0.2c0.1,0,0.3,0,0.3,0.2C47.7,38.6,47.5,38.7,47.4,38.7z"/>
+				<path class="some" opacity="0.70" fill="white" d="M47.4,37.6c-0.6,0-1.1,0.5-1.1,1.1c0,0.6,0.5,1.1,1.1,1.1c0.6,0,1.1-0.5,1.1-1.1C48.4,38.1,48,37.6,47.4,37.6
+					z M47.4,39.6c-0.5,0-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9c0.5,0,0.9,0.4,0.9,0.9C48.3,39.2,47.9,39.6,47.4,39.6z"/>
+			</g>
+		</g>
+		</svg>
+		</a>
+	</div>
+
+	<div style="margin: auto; color: grey; text-align: center; padding-top:24px; font-size: 12px; line-height: 18px; width: 100%;">
+		
+	Desing and code by me<br>
+	&copy; Toni Kauppila <script>document.write(new Date().getFullYear());</script> 
+		
+	</div>
+</div>
+<!-- Footer ends -->
+	
+<div class="empty-space"></div>
+	
+<!-- Contact modal -->
+<div id="myModal" class="modal">
+
+  	<!-- Modal content -->
+	<div class="modal-content">
+    	<span class="close">&times;</span>
+	  	<div class="circle modal-image"></div>
+		<div>
+			<form class="gform" method="POST" data-email="example@email.net"
+			action="https://script.google.com/macros/s/AKfycbwit-64b6J77rmsnjBXxxwD8JucjOvtTAj-5X6TFA/exec">
+
+			<div class="form-elements">
+				<p>
+					<font style="font-size:18px; line-height: 30px; letter-spacing: 0px;">Send me an e-postcard darling!</font>
+				</p>
+				<fieldset class="form-item">
+					<label for="name">Name </label>
+					<input id="name" name="name" required placeholder="" />
+			  	</fieldset>
+
+				<fieldset class="form-item">
+					<label for="message">Message</label>
+					<textarea id="message" name="message" rows="4"
+					required placeholder=""></textarea>
+				</fieldset>
+
+				<fieldset class="form-item">
+					<label for="email">Email Address</label>
+					<input id="email" name="email" type="email" value=""
+					required placeholder=""/>
+				</fieldset>
+
+				<fieldset class="pure-group honeypot-field">
+					<label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+					<input id="honeypot" type="text" name="honeypot" value="" />
+				</fieldset>
+
+				<button class="form-button">
+				Send
+				</button>
+			</div>
+			<div class="thankyou_message animated fadeIn" style="display:none;">
+				<h3>Thanks for your message! I'll get back to you as soon as I can.</h3>
+			</div>
+		</form>
+	</div>
+	</div>
+</div>
+<!-- Contact modal ends -->
+	
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+	
+<script>
+	
+// Launch tippy
+tippy('[data-tippy-content]', {
+  offset: [0, 16],
+});
+	
+</script>
+	
+<script>
+	
+// Hide navbar when scrolling down	
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-80px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+</script>
+	
+<script>
+	
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("modalBtn");
+var btnMobile = document.getElementById("modalBtnMobile");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+btnMobile.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+	
+<script>
+
+// Initiate AOS
+AOS.init({
+
+	startEvent: 'DOMContentLoaded',
+	duration: 500
+});
+	
+</script>
+	
+<script>
+// Animation to form button
+$(document).ready(function(){
+	$(".form-button").click(function(){
+		$(this).addClass("active");
+	});
+});
+</script>
+
+<script data-cfasync="false" type="text/javascript" src="scripts/form-submission-handler.js">
+</script>
+	
+</body>
+</html>

@@ -99,8 +99,8 @@ a:hover .svg-fill-stroke{
 }
 
 h1 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 40px;
+	font-family: 'Judson', sans-serif;
+	font-size: 44px;
 	font-weight: 400;
 	letter-spacing: -0.5px;
 	color: var(--text-color);
@@ -108,18 +108,17 @@ h1 {
 }
 
 h2 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 32px;
+	font-family: 'Judson', serif;
+	font-size: 38px;
 	line-height: 38px;
-	font-weight: 400;
 	letter-spacing: -0.5px;
 	color: var(--text-color);
-	margin:32px 0 16px 0;
+	margin:32px 0 24px 0;
 }
 
 h3 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 24px;
+	font-family: 'Judson', serif;
+	font-size: 28px;
 	letter-spacing: -0.5px;
 	line-height: 38px;
 	color: var(--text-color);
@@ -381,9 +380,31 @@ p.intro {
 	
 /* STYLES FOR THE WORK SITE */
 
+
 .aava-hero {
 	width: 100%;
-	background-color: #F0F9FF;
+    background: linear-gradient(33deg, #f0f9ff, #c5dff0, #f0f9ff);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 15s ease infinite;
+    -moz-animation: AnimationName 15s ease infinite;
+    animation: AnimationName 15s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:88% 0%}
+    50%{background-position:13% 100%}
+    100%{background-position:88% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:88% 0%}
+    50%{background-position:13% 100%}
+    100%{background-position:88% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:88% 0%}
+    50%{background-position:13% 100%}
+    100%{background-position:88% 0%}
 }
 
 .helsingo-hero {
@@ -856,7 +877,7 @@ video {
 .secondary-button-front-page{
 	font-family: 'Open Sans';
 	font-size: 16px;
-	font-weight: 700;
+	font-weight: 500;
 	text-align: center;
 	line-height: 36px;
 	background: none;
@@ -1026,7 +1047,6 @@ input, textarea {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 	animation-name: animatetop;
 	animation-duration: 0.3s;
-	overflow: auto;
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 }
@@ -1100,7 +1120,7 @@ input, textarea {
 	writing-mode: vertical-lr;
 	text-orientation: sideways;
 	text-align: center;
-	color:rgba(255,255,255,0.6);
+	color: white;
 	transform: rotate(180deg);
 	font-size: 12px;
 	letter-spacing: 1px;
@@ -1710,7 +1730,7 @@ h1 {
 }	
 
 h2 {
-	font-size: 28px;
+	font-size: 32px;
 	line-height: 34px;
 }	
 	

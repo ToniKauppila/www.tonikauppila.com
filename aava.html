@@ -94,7 +94,7 @@
 <!-- Desktop nav ends -->
 	
 <div class="top-spacer" style="background: white;"></div>
-<div id="wrapper" data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-once="true">
+<div id="wrapper">
 
 	<!-- Header -->
 	<div class="aava-hero">
@@ -154,22 +154,22 @@
 					<div class="fifty-percent-image-1">
 						<video data-aos="fade-up" data-aos-easing="ease-in-out" 
 						data-aos-offset="0" data-aos-once="true" autoplay loop playsinline muted width="100%" style="max-width: 800px; width: 100%; margin: auto; border-radius: 3em; padding: 24px 24px 32px 24px; box-sizing: border-box; 
-						filter: drop-shadow(0px 16px 80px rgba(0, 0, 0, 0.15));">
+						filter: drop-shadow(0px 16px 80px rgba(0, 62, 89, 0.15));">
 							<source src="images/Aava/Aava_intro.mov" type="video/mp4">
 							Your browser does not support HTML5 video.
 						</video>
 					</div>
-					<div class="fifty-percent-image-2">
+					<div class="fifty-percent-image-2" style="text-align: left;">
 
 						<h2>Oma Aava app</h2>
 
 						<p>With the Oma Aava app, patients can:</p>
 
 						<ul>
-							<li>See and manage their medical information.</li>
+							<li>See and manage their medical information and preferences.</li>
 							<li>Check in for the coming appointments.</li>
-							<li>Reach a doctor with a modern chat with automatic symptom assessment.</li>
-							<li>Book a time for a practitioner.</li>
+							<li>Reach a doctor via modern chat with automatic symptom assessment.</li>
+							<li>Book a time for a practitioner (this was designed, but implemented as web view).</li>
 						  </ul>
 							
 					</div>
@@ -187,10 +187,11 @@
 			
 			<p>As we all know, nowadays most of the traffic online comes from mobile phones and people are generally accustomed to taking care of their problems online on the go. That's why a medical center without a decent app would be in danger of losing patients to other companies with stronger digital tools.</p>
 
-			<p>As there was competition in the digital clinic game in Finland already, we had to think about e.g. follow questions when starting to design the app:</p>
+			<p>As there was competition in the digital clinic scene in Finland already, we had to think about e.g. follow questions when starting to design the app:</p>
 			<ul>
 				<li>How could we separate Aava from the competitors?</li>
 				<li>How might we make the experience as frictionless as possible with all the regulations and privacy demands regarding health care?</li>
+				<li>How can we ensure that practitioners are motivated to work with chat and new digital tools?</li>
 			  </ul>
 
 
@@ -198,7 +199,7 @@
 
 			<h2>Research</h2>
 			
-			<p>We conducted about ten patient interviews at the start of our project. Most of the participants had prior experience about digital clinics so they knew what features to expect from a telemedicine app. There were a lot of complaints about old-fashioned and buggy chats and somewhat clinical appearances of the existing apps. Most had problems with overly long waiting times in the chats, leading to frustration.</p>
+			<p>We conducted about ten patient interviews at the start of our project. Most of the participants had prior experience about digital clinics so they knew what features to expect from a telemedicine app. There were a lot of complaints about old-fashioned and buggy chats and somewhat clinical appearances of the existing apps. Most had problems with overly long waiting times in the chats, leading to frustration and distrust.</p>
 
 			<p>The usual symptoms that could easily be diagnosed and treated online are e.g. flu, skin problems, eye infections or an urinary tract infection. We decided to start designing the doctor's chat with the urinary tract infection use case, since it rose from the interviews too. It's complex enough from a diagnostic point of view and a very common problem that can be easily treated without a physical appointment. 
 			</p>
@@ -207,72 +208,72 @@
 			</p><br>
 		</div>
 
-			<!-- Full width area -->
-			<div class="full-width-content" style="background-color: #F0F9FF; padding-bottom: 64px; padding-top: 0px;">
+		<!-- Full width area -->
+		<div class="full-width-content" style="background-color: #F0F9FF; padding-bottom: 64px; padding-top: 0px;">
 
-				<div class="work-content" style="max-width: 900px;">
-					<div class="images-side-by-side">
-						<div class="fifty-percent-image-1">
-							<video data-aos="fade-up" data-aos-easing="ease-in-out" 
-							data-aos-offset="0" data-aos-once="true" controls playsinline muted width="100%" style="max-width: 800px; width: 100%; margin: auto; border-radius: 3em; padding: 24px 24px 32px 24px; box-sizing: border-box; 
-							filter: drop-shadow(0px 16px 80px rgba(0, 0, 0, 0.15));">
-								<source src="images/Aava/Aava_chat.mov" type="video/mp4">
-								Your browser does not support HTML5 video.
-							</video>
-						</div>
-						<div class="fifty-percent-image-2">
-	
-							<h2>The Chat</h2>
-	
-							<p>We ended up having a straightforward entrance to the chat, with the most common symptoms listed on a grid based on their prevalence. The chat provides a thumb-friendly symptom assessment flow, which leads to the actual live conversation with the doctor or nurse.</p>
+			<div class="work-content" style="max-width: 900px;">
+				<div class="images-side-by-side">
+					<div class="fifty-percent-image-1">
+						<video data-aos="fade-up" data-aos-easing="ease-in-out" 
+						data-aos-offset="0" data-aos-once="true" controls playsinline muted width="100%" style="max-width: 800px; width: 100%; margin: auto; border-radius: 3em; padding: 24px 24px 32px 24px; box-sizing: border-box; 
+						filter: drop-shadow(0px 16px 80px rgba(0, 62, 89, 0.15));">
+							<source src="images/Aava/Aava_chat.mov" type="video/mp4">
+							Your browser does not support HTML5 video.
+						</video>
+					</div>
+					<div class="fifty-percent-image-2" style="text-align: left;">
 
-							<p>Patients can use emojis and send photos of the symptoms to help with the diagnosis. The doctor can open up a video call on the app, if further info is needed. The ability to use emojis was a deliberate choice, since it makes the communication a little more emphatic, especially from the practitioner side.</p>
+						<h2>The Chat</h2>
 
-							<p>Aava's professionals, us and our developers carefully assessed whether to create a chat from scratch or to use a third party chat e.g. Ninchat. Turned out that the only way to ensure a high quality chat experience, was to design and build it using the actual use cases of Aava's patients and practitioners.</p>
-								
-						</div>
+						<p>We ended up having a straightforward entrance to the chat, with the most common symptoms listed on a grid based on their prevalence. The chat provides a thumb-friendly symptom assessment flow, which leads to the actual live conversation with the doctor or nurse.</p>
+
+						<p>Patients can use emojis and send photos of the symptoms to help with the diagnosis. The doctor can open up a video call on the app, if further info is needed. The ability to use emojis was a deliberate choice, since it makes the communication a little more emphatic, especially from the practitioner side.</p>
+
+						<p>Aava's professionals, us and our developers carefully assessed whether to create a chat from scratch or to use a third party chat e.g. Ninchat. Turned out that the only way to ensure a high quality chat experience, was to design and build it using the actual use cases of Aava's patients and practitioners.</p>
+							
 					</div>
 				</div>
 			</div>
-			<!-- Full width area end -->
+		</div>
+		<!-- Full width area end -->
 
-			<!-- Full width area -->
-			<div class="full-width-content" style="background-color: white; padding-bottom: 64px; padding-top: 0px;">
+		<!-- Full width area -->
+		<div class="full-width-content" style="background-color: white; padding-bottom: 64px; padding-top: 0px;">
 
-				<div class="work-content" style="max-width: 900px;">
-					<div class="images-side-by-side" style="flex-direction: row-reverse;">
-						<div class="fifty-percent-image-1">
-							<video data-aos="fade-up" data-aos-easing="ease-in-out" 
-							data-aos-offset="0" data-aos-once="true" autoplay loop playsinline muted width="100%" style="max-width: 800px; width: 100%; margin: auto; border-radius: 3em; padding: 24px 24px 32px 24px; box-sizing: border-box; 
-							filter: drop-shadow(0px 16px 80px rgba(0, 0, 0, 0.15));">
-								<source src="images/Aava/Aava_home_page.mov" type="video/mp4">
-								Your browser does not support HTML5 video.
-							</video>
-						</div>
-						<div class="fifty-percent-image-2">
-	
-							<h2>Home page</h2>
-	
-							<p>It was clear from the beginning that the most important information should be readily available when opening the app.</p>
+			<div class="work-content" style="max-width: 900px;">
+				<div class="images-side-by-side" style="flex-direction: row-reverse;">
+					<div class="fifty-percent-image-1">
+						<video data-aos="fade-up" data-aos-easing="ease-in-out" 
+						data-aos-offset="0" data-aos-once="true" autoplay loop playsinline muted width="100%" style="max-width: 800px; width: 100%; margin: auto; border-radius: 3em; padding: 24px 24px 32px 24px; box-sizing: border-box; 
+						filter: drop-shadow(0px 16px 80px rgba(0, 62, 89, 0.15));">
+							<source src="images/Aava/Aava_home_page.mov" type="video/mp4">
+							Your browser does not support HTML5 video.
+						</video>
+					</div>
+					<div class="fifty-percent-image-2" style="text-align: left;">
 
-							<p>The feed-like, chronological home page in the medical apps is pretty conventional, but we tried to emphasise the coming events and brought in a more immersive scrolling experience with the beautiful brand photos, personal greeting and a parallax effect.</p>
+						<h2>Home page</h2>
 
-							<p>While not implemented, I wanted to experiment with a dark mode version of the home page, since it would be beneficial for the light sensitive users of the app – you might not want to seek help from a bright app when having a migraine attack.</p>
-								
-						</div>
+						<p>It was clear from the beginning that the most important information should be readily available when opening the app.</p>
+
+						<p>The feed-like, chronological home page in the medical apps is pretty conventional, but we tried to emphasise the coming events and brought in a more immersive scrolling experience with the beautiful brand photos, personal greeting and a parallax effect.</p>
+
+						<p>While not implemented, I wanted to experiment with a dark mode version of the home page, since it would be beneficial for the light sensitive users of the app – you might not want to seek help from a bright app when having a migraine attack.</p>
+							
 					</div>
 				</div>
 			</div>
-			<!-- Full width area end -->
+		</div>
+		<!-- Full width area end -->
 
 		<!-- Full width area -->
 		<div class="full-width-content" style="background-color: #F0F9FF; padding-bottom: 64px;">
 
 			<img data-aos="fade-up" data-aos-easing="ease-in-out" 
-			data-aos-offset="100" data-aos-once="true" src="images/Aava/Aava_onboarding.png" alt="Exibition" style="z-index: 1; margin: auto; max-width: 1200px; display: block; width: 90%; border-radius: 18px; filter: drop-shadow(0px 16px 80px rgba(0, 0, 0, 0.15));">
+			data-aos-offset="100" data-aos-once="true" src="images/Aava/Aava_onboarding.png" alt="Exibition" style="z-index: 1; margin: auto; max-width: 1200px; display: block; width: 90%; border-radius: 18px; filter: drop-shadow(0px 16px 80px rgba(0, 62, 89, 0.15));">
 
 			<div class="work-content" style="text-align: center;">
-			<h2>Onboarding flow</h2>
+			<h2>Onboarding Flow</h2>
 			
 			<p>The onboarding had lots of legal and privacy related info that was mandatory to ask, but we managed to make it as frictionless as possible by testing it, making the content easily digestible and letting the user know how much is still left to do with the indicator on the top.</p>
 			</div>
@@ -281,31 +282,63 @@
 		<!-- Full width area end -->
 
 		<!-- Full width area -->
-		<div class="full-width-content" style="background-color: white; padding-bottom: 64px; padding-top: 0px;">
+		<div class="full-width-content" style="background-color: white; padding-bottom: 64px;">
 
-			<div class="work-content" style="max-width: 900px;">
+			<img data-aos="fade-up" data-aos-easing="ease-in-out" 
+			data-aos-offset="100" data-aos-once="true" src="images/Aava/Aava_medical_info.png" alt="Exibition" style="z-index: 1; margin: auto; max-width: 1200px; display: block; width: 90%; border-radius: 18px; filter: drop-shadow(0px 16px 80px rgba(0, 62, 89, 0.15));">
+
+			<div class="work-content" style="text-align: center;">
+			<h2>Medical Information</h2>
+			
+			<p>All the medical information was already available but we made some adjustments to the listings and ordering compared to the Oma Aava on the web based on the use cases we'd found in the early phase. We also designed a notification system to send push notifications about new prescriptions, lab results, referrals to name a few.</p>
+			</div>
+
+		</div>
+		<!-- Full width area end -->
+
+		<!-- Full width area -->
+		<div class="full-width-content" style="background-color: #F0F9FF; padding-bottom: 64px; padding-top: 0px;">
+
+			<div class="work-content" style="max-width: 900px; text-align: center;">
 				<div class="images-side-by-side">
 					<div class="fifty-percent-image-1">
 						<video data-aos="fade-up" data-aos-easing="ease-in-out" 
-						data-aos-offset="0" data-aos-once="true" controls playsinline muted width="100%" style="max-width: 800px; width: 100%; margin: auto; border-radius: 3em; padding: 24px 24px 32px 24px; box-sizing: border-box; 
-						filter: drop-shadow(0px 16px 80px rgba(0, 0, 0, 0.15));">
-							<source src="images/Aava/Aava_chat.mov" type="video/mp4">
+						data-aos-offset="0" data-aos-once="true" autoplay loop playsinline muted width="100%" style="max-width: 800px; width: 100%; margin: auto; border-radius: 3em; padding: 24px 24px 32px 24px; box-sizing: border-box; 
+						filter: drop-shadow(0px 16px 80px rgba(0, 62, 89, 0.15));">
+							<source src="images/Aava/Lottie_1.mov" type="video/mp4">
 							Your browser does not support HTML5 video.
 						</video>
 					</div>
 					<div class="fifty-percent-image-2">
-
-						<h2>Medical information</h2>
-
-						<p>We ended up having a straightforward entrance to the chat, whith the most common symptoms listed on a grid based on their prevalence. The chat provides a thumb-friendly symptom assessment flow, which leads to the actual live conversation with the doctor or nurse.</p>
-
-						<p>Patients can use emojies and send photos of the symptoms to help with the diagnosis. The doctor can open up a videa call on app, if further info is needed. The abilitity to use emojies was a deliberate choise, since it makes the communication a little more emphatic, especially from the practitioner side.</p>
-							
+						<video data-aos="fade-up" data-aos-easing="ease-in-out" 
+						data-aos-offset="0" data-aos-once="true" autoplay loop playsinline muted width="100%" style="max-width: 800px; width: 100%; margin: auto; border-radius: 3em; padding: 24px 24px 32px 24px; box-sizing: border-box; 
+						filter: drop-shadow(0px 16px 80px rgba(0, 62, 89, 0.15));">
+							<source src="images/Aava/Lottie_2.mov" type="video/mp4">
+							Your browser does not support HTML5 video.
+						</video>
 					</div>
 				</div>
+
+				<div style="max-width: 680px; margin: auto;">
+					<h2>Animations</h2>
+				
+					<p>The project was very fast paced, but I managed to design a couple of Lottie animations to add some motion to the app. Luckily the developers were familiar with Lottie.</p>
+				</div>
+
 			</div>
 		</div>
 		<!-- Full width area end -->
+
+		<div class="work-content">
+			<br>
+			<hr>
+
+			<h2>Reflection</h2>
+				
+			<p>Designing the digital clinic for Aava was one of the most interesting projects for me so far. As most of the big players in Finnish private healthcare have already published their telemedicine apps, it was a privilege to be trusted to design the important digital tools for Aava.</p>
+
+			<p>I got to lead the design work after the three week concepting phase, so it was an educational journey for me in that sense too. I'm eagerly looking forward to seeing how Aava's digital tools will evolve in the future!</p>
+		</div>
 
 
 

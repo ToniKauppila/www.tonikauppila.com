@@ -628,15 +628,16 @@ hr::before {
 	text-align: center;
 	margin: auto;
 	padding-bottom: 40px;
+	padding-top: 8px;
 	transition: .2s;
 }
 
 .logo img {
-	height: 28px;
+	height: 32px;
 }
 
 .logo {	
-	margin: 24px;
+	margin: 32px;
 	filter: brightness(0%);
 	transition: .2s;
 	height: 32px;
@@ -1810,7 +1811,7 @@ header div {
 
 
 .logo {
-	margin: 16px;
+	margin: 24px;
 	height: 24px;
 }
 	

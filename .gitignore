@@ -4,3 +4,14 @@
 _notes/
 /bower_components/
 /node_modules/
+
+# macOS
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# Build output
+dist/
+build/

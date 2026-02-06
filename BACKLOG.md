@@ -23,7 +23,7 @@ Overview of improvements: **done** vs **backlog**. Use this to pick the next tas
 
 | # | Item | Notes |
 |---|------|--------|
-| ~~1~~ | ~~**Templating / single source for head & nav**~~ | **Done.** 11ty: `pages/*.njk` + `_includes/` (layout, head, nav-home, nav-default, scripts-*). Build with `npm run build` → `_site/`. |
+| ~~1~~ | ~~**Templating / single source for head & nav**~~ | Tried 11ty but removed it — overkill for site this size. Nav/head duplication is manageable with find-and-replace. |
 | ~~2~~ | ~~**Split main.css**~~ | **Done.** Split into `base.css`, `components.css`, `layout.css`, `pages.css`. `main.css` now imports all four. |
 
 ### Medium impact
@@ -47,6 +47,6 @@ Overview of improvements: **done** vs **backlog**. Use this to pick the next tas
 
 ## Quick reference
 
-- **Done:** 8 areas (main.js, k-ai, work K-Plussa, Lottie refactor, scripts + jQuery removal, accessibility, **11ty templating**, **CSS split**).
+- **Done:** 7 areas (main.js, k-ai, work K-Plussa, Lottie refactor, scripts + jQuery removal, accessibility, **CSS split**).
 - **Backlog:** 7 items (0 high, 4 medium, 3 lower).
 - **Suggest starting with:** #3 (Rellax deprecation) or #4 (remove redundant rel="tooltip") for quick cleanups.

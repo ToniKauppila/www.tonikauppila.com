@@ -15,3 +15,8 @@ logs
 # Build output
 dist/
 build/
+_site/
+
+# 11ty temp content (used when generating pages)
+pages/_*_content.html
+_work_content.html

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	{% include "head.njk" %}
+</head>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}{% if bodyStyle %} style="{{ bodyStyle }}"{% endif %}>
+	<a href="{{ skipTarget }}" class="skip-link">Skip to main content</a>
+	{% if isHome %}
+	{% include "nav-home.njk" %}
+	{% else %}
+	{% include "nav-default.njk" %}
+	{% endif %}
+
+	{{ content | safe }}
+
+	{% if scriptGroup == "home" %}
+	{% include "scripts-home.njk" %}
+	{% elif scriptGroup == "photos" %}
+	{% include "scripts-photos.njk" %}
+	{% elif scriptGroup == "illustrations" %}
+	{% include "scripts-illustrations.njk" %}
+	{% elif scriptGroup == "rellax" %}
+	{% include "scripts-rellax.njk" %}
+	{% else %}
+	{% include "scripts-default.njk" %}
+	{% endif %}
+</body>
+</html>

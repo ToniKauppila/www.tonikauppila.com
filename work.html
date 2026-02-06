@@ -29,15 +29,14 @@
 		rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 
 </head>
 
 <body>
+	<a href="#wrapper" class="skip-link">Skip to main content</a>
 
 	<!-- Mobile nav starts -->
-	<nav class="mobile-nav">
+	<nav class="mobile-nav" aria-label="Main">
 		<div class="mobile-nav-content">
 			<a href="index" class="white-link">
 				<svg id="Home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -103,7 +102,7 @@
 	<!-- Mobile nav ends -->
 
 	<!-- Desktop nav starts -->
-	<nav id="navbar">
+	<nav id="navbar" aria-label="Main">
 		<div class="nav-wrapper">
 			<div class="nav-60-left">
 				<div class="title"><a class="white-link" href="index">Toni Kauppila</a></div>
@@ -373,8 +372,7 @@
 							src="https://www.k-ruoka.fi/assets/27417/img/logo-neste-k.svg">
 					</div>
 					<div class="logo">
-						<img data-tippy-content="K-Plussa" rel="tooltip" data-tippy-content="K-Plussa" rel="tooltip"
-							alt="K-Plussa" src="https://www.k-ruoka.fi/assets/27417/img/kplussa-color.svg">
+						<img data-tippy-content="K-Plussa" alt="K-Plussa" src="https://www.k-ruoka.fi/assets/27417/img/kplussa-color.svg">
 					</div>
 					<div class="logo">
 						<img data-tippy-content="K-Rauta" rel="tooltip" alt="K-Rauta"
@@ -667,96 +665,8 @@
 
 	<script src="https://unpkg.com/@popperjs/core@2"></script>
 	<script src="https://unpkg.com/tippy.js@6"></script>
-
-	<script>
-
-		// Launch tippy
-		tippy('[data-tippy-content]', {
-			offset: [0, 16],
-		});
-
-	</script>
-
-	<script>
-		// Get the modal
-		var modal = document.getElementById("myModal");
-
-		// Get the button that opens the modal
-		var btn = document.getElementById("modalBtn");
-		var btnMobile = document.getElementById("modalBtnMobile");
-
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks the button, open the modal 
-		btn.onclick = function () {
-			modal.style.display = "block";
-		}
-
-		btnMobile.onclick = function () {
-			modal.style.display = "block";
-		}
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function () {
-			modal.style.display = "none";
-		}
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function (event) {
-			if (event.target == modal) {
-				modal.style.display = "none";
-			}
-		}
-
-		/*Initiate AOS */
-		AOS.init({
-
-			//	disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-			startEvent: 'DOMContentLoaded',
-			duration: 500
-		});
-
-	</script>
-
-	<script>
-		$(document).ready(function () {
-			// Add smooth scrolling to all links
-			$("a").on('click', function (event) {
-
-				// Make sure this.hash has a value before overriding default behavior
-				if (this.hash !== "") {
-					// Prevent default anchor click behavior
-					event.preventDefault();
-
-					// Store hash
-					var hash = this.hash;
-
-					// Using jQuery's animate() method to add smooth page scroll
-					// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-					$('html, body').animate({
-						scrollTop: $(hash).offset().top
-					}, 800, function () {
-
-						// Add hash (#) to URL when done scrolling (default click behavior)
-						window.location.hash = hash;
-					});
-				} // End if
-			});
-		});
-	</script>
-
-	<script>
-		// Animation to form button
-		$(document).ready(function () {
-			$(".form-button").click(function () {
-				$(this).addClass("active");
-			});
-		});
-	</script>
-
-	<script data-cfasync="false" type="text/javascript" src="scripts/form-submission-handler.js">
-	</script>
+	<script src="scripts/main.js"></script>
+	<script data-cfasync="false" type="text/javascript" src="scripts/form-submission-handler.js"></script>
 
 </body>
 

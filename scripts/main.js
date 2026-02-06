@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     x.addListener(destroyRellax);
   }
 
-  // --- Navbar Scroll Logic ---
+  // --- Navbar Scroll Logic (index only: show/hide bottom mobile nav) ---
   const mobileNav = document.getElementById("mobile-nav-fp");
   if (mobileNav) {
     window.addEventListener('scroll', () => {
@@ -33,6 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         mobileNav.style.bottom = "-70px";
       }
+    });
+  }
+
+  // --- Navbar hide on scroll (desktop top nav) ---
+  const navbar = document.getElementById("navbar");
+  if (navbar) {
+    let prevScrollPos = window.pageYOffset;
+    window.addEventListener('scroll', () => {
+      const currentScrollPos = window.pageYOffset;
+      navbar.style.top = prevScrollPos > currentScrollPos ? "0" : "-80px";
+      prevScrollPos = currentScrollPos;
     });
   }
 
@@ -62,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (modal) {
     modalBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        modal.display = "block"; // Original code used style.display, but let's check css
         modal.style.display = "block";
       });
     });

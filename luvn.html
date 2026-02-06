@@ -25,14 +25,14 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Judson:wght@700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </head>
 
 <body>
+<a href="#wrapper" class="skip-link">Skip to main content</a>
 
 <!-- Mobile nav starts -->
-<nav class="mobile-nav">
+<nav class="mobile-nav" aria-label="Main">
 	<div class="mobile-nav-content">
 		<a href="index" class="white-link">
 			<svg id="Home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.5,11v8.79a.72.72,0,0,1-.79.67H15a.76.76,0,0,1-.79-.67V15a.72.72,0,0,0-.79-.67H10.59A.72.72,0,0,0,9.8,15c.07,1.12.07,3.57.07,4.77a.72.72,0,0,1-.79.67H4.22a.7.7,0,0,1-.72-.67V11a.7.7,0,0,1,.2-.45l7.81-6.92a.54.54,0,0,1,.79,0l7.87,6.85A.54.54,0,0,1,20.5,11Z" style="fill:none;stroke:#fff;stroke-miterlimit:10"/></svg>
@@ -65,7 +65,7 @@
 <!-- Mobile nav ends -->
 
 <!-- Desktop nav starts -->
-<nav id="navbar">
+<nav id="navbar" aria-label="Main">
 	<div class="nav-wrapper">
 	<div class="nav-60-left">
 		<div class="title"><a class="white-link" href="index">Toni Kauppila</a></div>
@@ -359,88 +359,8 @@
 	
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://unpkg.com/tippy.js@6"></script>
-	
-<script>
-	
-// Launch tippy
-tippy('[data-tippy-content]', {
-  offset: [0, 16],
-});
-	
-</script>
-	
-<script>
-	
-// Hide navbar when scrolling down	
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-80px";
-  }
-  prevScrollpos = currentScrollPos;
-}
-
-</script>
-	
-<script>
-	
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("modalBtn");
-var btnMobile = document.getElementById("modalBtnMobile");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-btnMobile.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-	
-<script>
-
-// Initiate AOS
-AOS.init({
-
-	startEvent: 'DOMContentLoaded',
-	duration: 500
-});
-	
-</script>
-	
-<script>
-// Animation to form button
-$(document).ready(function(){
-	$(".form-button").click(function(){
-		$(this).addClass("active");
-	});
-});
-</script>
-
-<script data-cfasync="false" type="text/javascript" src="scripts/form-submission-handler.js">
-</script>
+<script src="scripts/main.js"></script>
+<script data-cfasync="false" type="text/javascript" src="scripts/form-submission-handler.js"></script>
 	
 </body>
 </html>

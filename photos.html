@@ -25,13 +25,13 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Judson:wght@700&family=Open+Sans:wght@300;400;700&display=swap"
 		rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body class="photos" style="background-color: #121212;">
+	<a href="#wrapper" class="skip-link">Skip to main content</a>
 
 	<!-- Mobile nav starts -->
-	<nav class="mobile-nav">
+	<nav class="mobile-nav" aria-label="Main">
 		<div class="mobile-nav-content">
 			<a href="index" class="white-link">
 				<svg id="Home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -97,7 +97,7 @@
 	<!-- Mobile nav ends -->
 
 	<!-- Desktop nav starts -->
-	<nav id="navbar">
+	<nav id="navbar" aria-label="Main">
 		<div class="nav-wrapper">
 			<div class="nav-60-left">
 				<div class="title"><a class="white-link" href="index">Toni Kauppila</a></div>
@@ -1006,85 +1006,14 @@
 
 	<script src="https://unpkg.com/@popperjs/core@2"></script>
 	<script src="https://unpkg.com/tippy.js@6"></script>
+	<script src="scripts/main.js"></script>
+	<script data-cfasync="false" type="text/javascript" src="scripts/form-submission-handler.js"></script>
 
 	<script>
-
-		// Launch tippy
-		tippy('[data-tippy-content]', {
-			offset: [0, 16],
-		});
-
-	</script>
-
-	<script>
-
-		// Get the modal
-		var modal = document.getElementById("myModal");
-
-		// Get the button that opens the modal
-		var btn = document.getElementById("modalBtn");
-		var btnMobile = document.getElementById("modalBtnMobile");
-
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks the button, open the modal 
-		btn.onclick = function () {
-			modal.style.display = "block";
-		}
-
-		btnMobile.onclick = function () {
-			modal.style.display = "block";
-		}
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function () {
-			modal.style.display = "none";
-		}
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function (event) {
-			if (event.target == modal) {
-				modal.style.display = "none";
-			}
-		}
-	</script>
-
-	<script>
-
-		//Show images additional info from click or touch 
+		// Show image info on click or touch (photos page)
 		function showInfo(selector) {
 			document.querySelector(selector).classList.toggle("show");
 		}
-
-	</script>
-
-	<script>
-
-		//Hide navbar when scrolling down
-		var prevScrollpos = window.pageYOffset;
-		window.onscroll = function () {
-			var currentScrollPos = window.pageYOffset;
-			if (prevScrollpos > currentScrollPos) {
-				document.getElementById("navbar").style.top = "0px";
-			} else {
-				document.getElementById("navbar").style.top = "-80px";
-			}
-			prevScrollpos = currentScrollPos;
-		}
-
-	</script>
-
-	<script>
-		// Animation to form button
-		$(document).ready(function () {
-			$(".form-button").click(function () {
-				$(this).addClass("active");
-			});
-		});
-	</script>
-
-	<script data-cfasync="false" type="text/javascript" src="scripts/form-submission-handler.js">
 	</script>
 
 	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.1/dist/lazyload.min.js"></script>

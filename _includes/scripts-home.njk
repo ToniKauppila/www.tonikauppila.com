@@ -1,0 +1,12 @@
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script src="scripts/rellax.min.js"></script>
+<script src="scripts/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.1/dist/lazyload.min.js"></script>
+<script data-cfasync="false" type="text/javascript" src="scripts/form-submission-handler.js"></script>
+<script>
+(function () {
+	function logElementEvent(eventName, element) { console.log(Date.now(), eventName, element.getAttribute("data-src")); }
+	var ll = new LazyLoad({ threshold: 0, cancel_on_exit: true });
+})();
+</script>

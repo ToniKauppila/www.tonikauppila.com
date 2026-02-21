@@ -17,7 +17,10 @@
   border-radius: 18px;
   margin-top: 32px;
   background: white;
+}
 
+.container-disabled {
+	opacity: .8;
 }
 
 .min-height {

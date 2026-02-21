@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* Main stylesheet – imports split files for easier maintenance */
+
+@import "base.css";
+@import "components.css";
+@import "layout.css";
+@import "pages.css";

@@ -24,6 +24,128 @@ document.addEventListener('DOMContentLoaded', () => {
     x.addListener(destroyRellax);
   }
 
+  // --- Recommendations carousel ---
+  const recScroller = document.getElementById('recommendations-scroller');
+  if (recScroller) {
+    const prevBtn = document.querySelector('.rec-nav-btn[data-rec-dir="prev"]');
+    const nextBtn = document.querySelector('.rec-nav-btn[data-rec-dir="next"]');
+    const fade = document.querySelector('.recommendations-fade');
+
+    // Cards snap via JS rather than native CSS scroll-snap: with an 80%-wide
+    // card, "mandatory" snapping requires dragging past 50% of the viewport
+    // to advance, which feels stuck/unresponsive. This uses a much smaller
+    // distance threshold, plus flick velocity, like a real touch carousel.
+    const cardStep = () => {
+      const card = recScroller.querySelector('.recommendation-card');
+      return (card ? card.getBoundingClientRect().width : 300) + 20; // 20 = gap
+    };
+
+    const maxIndex = () => Math.round((recScroller.scrollWidth - recScroller.clientWidth) / cardStep());
+
+    const snapToIndex = (index) => {
+      const clamped = Math.max(0, Math.min(index, maxIndex()));
+      recScroller.scrollTo({ left: clamped * cardStep(), behavior: 'smooth' });
+    };
+
+    const nearestIndex = () => Math.round(recScroller.scrollLeft / cardStep());
+
+    if (prevBtn) prevBtn.addEventListener('click', () => snapToIndex(nearestIndex() - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => snapToIndex(nearestIndex() + 1));
+
+    const updateNavButtons = () => {
+      const maxScroll = recScroller.scrollWidth - recScroller.clientWidth;
+      if (prevBtn) prevBtn.disabled = recScroller.scrollLeft <= 1;
+      if (nextBtn) nextBtn.disabled = recScroller.scrollLeft >= maxScroll - 1;
+      if (fade) fade.style.opacity = recScroller.scrollLeft >= maxScroll - 1 ? '0' : '1';
+    };
+
+    // Free wheel/trackpad scrolling is intentionally left un-snapped — only
+    // an explicit drag (below) or a nav-button click snaps to a card.
+    let isDragging = false;
+    recScroller.addEventListener('scroll', updateNavButtons, { passive: true });
+
+    window.addEventListener('resize', updateNavButtons);
+    updateNavButtons();
+
+    // --- Click-and-drag scrolling (mouse only; touch/trackpad already works natively) ---
+    let dragMoved = false;
+    let startX = 0;
+    let startScrollLeft = 0;
+    let lastX = 0;
+    let lastT = 0;
+    let velocity = 0; // px/ms, positive = dragging left (content moving right-to-left)
+
+    // Links/images are natively draggable in most browsers, which fights our
+    // own drag with a ghost drag-image and stutters the scroll. Kill it at
+    // the source rather than fighting it after the fact.
+    recScroller.addEventListener('dragstart', (e) => e.preventDefault());
+
+    recScroller.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = lastX = e.pageX;
+      startScrollLeft = recScroller.scrollLeft;
+      lastT = performance.now();
+      velocity = 0;
+      recScroller.classList.add('is-dragging');
+      // Set inline (not just via the class) so scroll-snap is guaranteed to
+      // be off before the very next mousemove — otherwise a mandatory snap
+      // can fight a programmatic scrollLeft write and yank it back.
+      recScroller.style.scrollSnapType = 'none';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const delta = e.pageX - startX;
+      recScroller.scrollLeft = startScrollLeft - delta;
+
+      const now = performance.now();
+      const dt = now - lastT;
+      if (dt > 0) velocity = (lastX - e.pageX) / dt;
+      lastX = e.pageX;
+      lastT = now;
+    });
+
+    const stopDragging = (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      recScroller.classList.remove('is-dragging');
+      recScroller.style.scrollSnapType = '';
+
+      // Judge drag-vs-click by NET movement at release, not by whether any
+      // single mousemove sample ever crossed a threshold — a plain click
+      // (especially a trackpad click) can report a brief jitter spike mid
+      // gesture and then settle right back, which would otherwise get the
+      // whole gesture mislabeled as a drag and silently eat the link click.
+      const finalX = e && typeof e.pageX === 'number' ? e.pageX : lastX;
+      dragMoved = Math.abs(finalX - startX) > 10;
+
+      const step = cardStep();
+      const startIndex = Math.round(startScrollLeft / step);
+      const draggedCards = (recScroller.scrollLeft - startScrollLeft) / step;
+      const isFlick = Math.abs(velocity) > 0.7; // fast flick commits even on a short drag
+
+      let targetIndex = startIndex;
+      if (isFlick) {
+        targetIndex = startIndex + (velocity > 0 ? 1 : -1);
+      } else if (Math.abs(draggedCards) > 0.2) {
+        // Once past the threshold, commit to at least one card — plain
+        // Math.round() would need >50% to round up to 1, defeating the
+        // whole point of a lower threshold.
+        targetIndex = startIndex + Math.sign(draggedCards) * Math.max(1, Math.round(Math.abs(draggedCards)));
+      }
+      snapToIndex(targetIndex);
+    };
+    window.addEventListener('mouseup', stopDragging);
+
+    // Prevent the drag from also triggering the LinkedIn link underneath it
+    recScroller.addEventListener('click', (e) => {
+      if (dragMoved) {
+        e.preventDefault();
+        dragMoved = false;
+      }
+    }, true);
+  }
+
   // --- Navbar Scroll Logic (index only: show/hide bottom mobile nav) ---
   const mobileNav = document.getElementById("mobile-nav-fp");
   if (mobileNav) {

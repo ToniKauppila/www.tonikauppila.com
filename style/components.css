@@ -49,6 +49,10 @@ p.intro {
 	margin: 16px 0 16px 0;
 }
 
+.quote-person p {
+	line-height: 26px;
+}
+
 .quote-img {
 	width: 64px;
 	min-width: 64px;
@@ -73,6 +77,152 @@ p.intro {
 	color: var(--text-color);
 	margin: 0;
 	font-weight: 500;
+}
+
+/* FRONT PAGE RECOMMENDATIONS — horizontal scroll-snap carousel, so the
+   testimonials don't just stack in a long vertical list. */
+.recommendations-section {
+	width: 100%;
+	background: var(--background-white);
+	padding: 32px 0 48px 0;
+	box-sizing: border-box;
+}
+
+.recommendations-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 24px;
+	box-sizing: border-box;
+}
+
+/* Scopes the fade to just the card row, so it never reaches up over the
+   heading/nav-button row above it. Also carries the bleed to the viewport
+   edge (so the last card isn't awkwardly clipped) — the fade below is
+   positioned against THIS box, so it must share the same edge. */
+.recommendations-scroll-area {
+	position: relative;
+	margin: 0 -24px;
+}
+
+/* Fades the trailing edge of the carousel to hint there's more to scroll */
+.recommendations-fade {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 130px;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+	pointer-events: none;
+}
+
+.recommendations-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin: 0 0 24px 0;
+}
+
+.recommendations-header > h2 {
+	text-align: left;
+	margin: 0;
+}
+
+.recommendations-nav {
+	display: flex;
+	gap: 8px;
+	flex: 0 0 auto;
+}
+
+.rec-nav-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px solid #dddddd;
+	background: white;
+	color: var(--text-color);
+	cursor: pointer;
+	padding: 0;
+	transition: .2s ease-in-out;
+}
+
+.rec-nav-btn:hover {
+	border-color: var(--active-color);
+	color: var(--active-color);
+}
+
+.rec-nav-btn:disabled {
+	opacity: .35;
+	cursor: default;
+	border-color: #dddddd;
+	color: var(--text-color);
+}
+
+.recommendations-scroller {
+	display: flex;
+	align-items: flex-start;
+	gap: 20px;
+	overflow-x: auto;
+	/* snapping is handled in JS (main.js), with a lower distance threshold
+	   and flick-velocity support — native "mandatory" snap requires
+	   dragging past 50% of an 80%-wide card, which feels stuck */
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none;
+	cursor: grab;
+	padding: 4px 24px 16px 24px;
+}
+
+.recommendations-scroller::-webkit-scrollbar {
+	display: none;
+}
+
+.recommendations-scroller.is-dragging {
+	cursor: grabbing;
+	scroll-behavior: auto;
+	user-select: none;
+}
+
+/* NOTE: do NOT set pointer-events:none on the links here. The class is still
+   applied when the browser hit-tests mouseup (JS only removes it afterwards),
+   so the anchor would be skipped, the click would resolve to the scroller
+   instead of the link, and the profile link would silently never open.
+   Drag-vs-click is handled in main.js via the dragMoved check instead. */
+
+.recommendation-card {
+	/* fixed proportion of the scroller (not content-based), so one card
+	   always sits at ~90% width with the next one peeking in beside it */
+	flex: 0 0 90%;
+	width: 90%;
+	background: white;
+	box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+	border-radius: 18px;
+	padding: 24px;
+	box-sizing: border-box;
+}
+
+.recommendation-card .quote-person {
+	margin: 0 0 12px 0;
+}
+
+.recommendation-card .quote-img {
+	width: 48px;
+	min-width: 48px;
+	height: 48px;
+	min-height: 48px;
+}
+
+.recommendation-card p:not(.author) {
+	font-size: 15px;
+	line-height: 1.55;
+	color: var(--text-color-secondary);
+	margin: 0 0 12px 0;
+}
+
+.recommendation-card p:not(.author):last-child {
+	margin-bottom: 0;
 }
 
 

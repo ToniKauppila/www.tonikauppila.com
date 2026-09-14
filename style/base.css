@@ -5,12 +5,17 @@
 
 :root {
 	--text-color: #333333;
-	--inverse: white;
+	--text-color-inverse: white;
+	--text-color-secondary: #666666;
 	--active-color: #00B3DB;
 	--hover-color: #69E4FF;
+	/* Darker, more saturated variant of --hover-color for legibility over
+	   photographic/light backgrounds (e.g. the front-page nav on the parallax hero). */
+	--hover-color-contrast: #fff;
 	--mark-color: #EBFBFF;
 	--lightgrey: #999999;
 	--background: #191919;
+	--background-white: white;
 	--background-opacity: #191919E6;
 }
 
@@ -21,7 +26,7 @@
 	left: 0;
 	padding: 0.75rem 1rem;
 	background: var(--background);
-	color: var(--inverse);
+	color: var(--text-color-inverse);
 	text-decoration: none;
 	font-weight: 400;
 	z-index: 10000;
@@ -115,11 +120,11 @@ a:hover .svg-fill-stroke {
 }
 
 .white-link {
-	color: var(--inverse);
+	color: var(--text-color-inverse);
 }
 
 h1 {
-	font-family: 'Judson', sans-serif;
+	font-family: 'Judson', serif;
 	font-size: 44px;
 	font-weight: 400;
 	letter-spacing: -0.5px;
@@ -130,6 +135,7 @@ h1 {
 h2 {
 	font-family: 'Judson', serif;
 	font-size: 38px;
+	font-weight: 400;
 	line-height: 38px;
 	letter-spacing: -0.5px;
 	color: var(--text-color);
@@ -139,10 +145,10 @@ h2 {
 h3 {
 	font-family: 'Judson', serif;
 	font-size: 28px;
+	font-weight: 400;
 	letter-spacing: -0.5px;
 	line-height: 38px;
 	color: var(--text-color);
-	font-weight: 400;
 	margin: 32px 0 16px 0;
 }
 

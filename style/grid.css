@@ -1,22 +1,177 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* ABOUT STATEMENT */
+.about-statement {
+	width: 100%;
+	box-sizing: border-box;
+	background: var(--background-white);
+	padding: 72px 0 64px 0;
+}
+
+.about-statement-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	text-align: left;
+	position: relative;
+}
+
+/* Accent line — parked in favor of the glow below. Code kept so it's a
+   one-line revert (just delete the display:none) if we go back to it. */
+.about-accent-line {
+	display: none;
+	position: absolute;
+	top: 4px;
+	left: 0px;
+	width: 4px;
+	height: calc(100% - 8px);
+	border-radius: 999px;
+	background: var(--hover-color);
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: transform 150ms ease-out;
+}
+
+.about-accent-line.aos-animate {
+	transform: scaleY(1);
+}
+
+/* Soft glow accent, echoing the teal dot on the hero. Fades in with the
+   same trigger as the text (.aos-animate on the wrapper itself). */
+.about-statement-wrapper::before {
+	content: "";
+	position: absolute;
+	top: -160px;
+	left: 0;
+	width: 1200px;
+	height: 120px;
+	border-radius: 50%;
+	background: var(--hover-color);
+	filter: blur(35px);
+	opacity: 0;
+	transition: opacity 500ms ease-out;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.about-statement-wrapper.aos-animate::before {
+	opacity: 0.35;
+}
+
+.about-statement-wrapper p {
+	position: relative;
+	z-index: 1;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	line-height: 1.6;
+	font-weight: 400;
+	color: var(--text-color-secondary);
+	margin: 0 0 24px 0;
+}
+
+.about-statement-wrapper h2 {
+	position: relative;
+	z-index: 1;
+	font-family: 'Judson', serif;
+	font-size: 44px;
+	line-height: 1.2;
+	font-weight: 400;
+	letter-spacing: -0.5px;
+	color: var(--text-color);
+	margin: 0 0 24px 0;
+}
+
+.about-statement-wrapper p:last-child {
+	margin-bottom: 0;
+}
+
+@media (max-width: 1200px) {
+	.about-statement-wrapper {
+		padding: 16px 24px;
+	}
+}
+
+@media (max-width: 960px) {
+	.about-statement {
+		padding: 16px 0;
+	}
+
+	.about-accent-line {
+	top: 4px;
+	left: 24px;
+	width: 4px;
+}
+
+	.about-statement-wrapper {
+		padding: 16px 24px;
+		margin: 24px 0 0px 0;
+	}
+
+.about-statement-wrapper::before {
+	top: -130px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 120px;
+	border-radius: 50%;
+	filter: blur(20px);
+}
+
+	.about-statement-wrapper p {
+		font-size: 18px;
+		line-height: 1.45;
+	}
+
+	.about-statement-wrapper h2 {
+		font-size: 30px;
+		line-height: 1.25;
+	}
+}
+
 /* WORK PAGE */
 .work-wrapper {
 	max-width: 1200px;
 	margin: auto;
 	text-align: center;
-	margin-top: 18px;
+	padding: 24px 24px 0px 24px;
+}
+
+/* Home-page section headings: semantic h2, but keep the display size of an h1 */
+.work-wrapper > h2:first-of-type,
+.referenses h2,
+.fp-content-text h2 {
+	font-family: 'Judson', serif;
+	font-size: 44px;
+	line-height: normal;
+	letter-spacing: -0.5px;
+	margin: 0 0 16px 0;
+}
+
+.work-wrapper > h2:first-of-type {
+	text-align: left;
+	margin-bottom: 0;
+}
+
+@media (max-width: 960px) {
+	.work-wrapper > h2:first-of-type,
+	.referenses h2,
+	.fp-content-text h2 {
+		font-size: 32px;
+	}
 }
 
 .container, .container-disabled {
   position: relative;
   width: 100%;
   transition: .2s ease-in-out;
-  box-shadow:  0px 4px 12px 0px rgba(0, 0, 0, 0.1);  
+  box-shadow:  0px 4px 12px 0px rgba(0, 0, 0, 0.1);
   border-radius: 18px;
   margin-top: 32px;
   background: white;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .container-disabled {
@@ -94,6 +249,7 @@
 	margin: auto;
 	text-align: center;
 	width: 100%;
+	flex: 1;
 }
 
 .ribbon {
@@ -153,12 +309,21 @@
 	white-space: normal;
 }
 
-.description-text h1 {
+.description-text h1,
+.description-text h3 {
+	font-family: 'Judson', serif;
 	font-size: 26px;
 	line-height: 28px;
 	padding: 0px;
 	margin: 0;
 	font-weight: 400;
+}
+
+.external-link-icon {
+	vertical-align: middle;
+	margin-left: 4px;
+	position: relative;
+	top: -2px;
 }
 
 .description-text .description-year {
@@ -171,7 +336,7 @@
 	font-size: 16px;
 	line-height: 22px;
 	margin: 10px 0 0 0;
-	color: #333;
+	color: var(--text-color-secondary);
 }
 
 /* GRID STYLES */
@@ -203,7 +368,7 @@
     padding: 0;
 	/* pull the row out by the column gutter so the outer cards sit flush
 	   with the 24px padding of the #work container */
-	margin: 0 -16px 16px -16px;
+	margin: 0 -16px;
 }
 
 .row-images {
@@ -239,6 +404,13 @@
     flex:33.33%;
 	 max-width: 33.33%;
     padding: 0 16px;
+    display: flex;
+}
+
+.column-work > a {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 
 
@@ -377,7 +549,8 @@
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
-	
+
+
 .column, .column-work, .column-third {
 	-ms-flex: 100%;
 	flex: 100%;

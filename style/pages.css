@@ -3,6 +3,16 @@
 
 /* FRONT PAGE FULL BACKGROUND */
 
+.fp-hero-frame {
+	position: relative;
+	/* dvh tracks the browser's actual visible viewport, so the hero still
+	   fills the screen on mobile once the address bar shows/hides (a plain
+	   height:100% chain rooted at html/body resolves against the *largest*
+	   possible viewport, leaving a gap once the toolbar reappears). */
+	height: 100%;
+	height: 100dvh;
+}
+
 .vertical-text {
 	width: 100%;
 	height: 100%;
@@ -123,7 +133,6 @@
 	align-items: center;
 	margin: auto;
 	max-width: 1100px;
-	padding-top: 20px;
 	padding-bottom: 0px;
 	position: relative;
 }
@@ -164,6 +173,8 @@
 
 .fp-content-text p {
 	margin-bottom: 0px;
+	font-size: 18px;
+	color: var(--text-color-secondary)
 }
 
 
@@ -200,7 +211,7 @@
 
 .footer-content p,
 .footer-content h3 {
-	color: var(--inverse);
+	color: var(--text-color-inverse);
 	opacity: 0.90;
 }
 
@@ -419,6 +430,12 @@ ul.breadcrumb:hover {
 		display: inherit;
 	}
 
+	.fp-content {
+		padding-bottom: 48px;
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
 	.fp-content-picture-photos {
 		background-image: none;
 	}
@@ -463,6 +480,10 @@ ul.breadcrumb:hover {
 	h2 {
 		font-size: 32px;
 		line-height: 34px;
+	}
+
+	.footer-content h3 {
+		font-size: 26px;
 	}
 
 	p,
@@ -615,7 +636,7 @@ ul.breadcrumb:hover {
 
 	.bg {
 		background-image: url(../images/portraits/Toni_Kauppila_3.jpg);
-		background-size: 555px;
+		/* background-size: 555px; */
 		position: relative;
 		transition: all 0.1s;
 	}
@@ -866,4 +887,5 @@ ul.breadcrumb:hover {
 		display: block;
 		padding-bottom: 100%;
 	}
+}
 

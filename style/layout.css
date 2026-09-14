@@ -71,16 +71,26 @@
 
 
 .nav-content {
-	flex-basis: 33.33%;
+	flex-basis: auto;
 	color: white;
 	margin: 6px 0 6px 0;
 	text-align: center;
 	justify-content: center;
 	font-size: 16px;
 	line-height: 12px;
+	white-space: nowrap;
 	box-sizing: border-box;
 	/*	border-right: thin #2D2D2D solid;*/
 	position: relative;
+}
+
+/* 24px between each nav item: Home↔Photography and Photography↔Contact. */
+.nav-40-right .nav-content:first-child {
+	margin-right: 24px;
+}
+
+.nav-40-right .nav-content:last-child {
+	margin-left: 24px;
 }
 
 .nav-content-active {
@@ -100,6 +110,23 @@
 	background-color: var(--hover-color);
 	filter: blur(10px);
 	opacity: 0.5;
+
+}
+
+/* Active nav-link text color. -contrast uses the more saturated variant
+   for legibility over the front-page's parallax hero photo, and also
+   overrides the indicator bar/blur (which default to --hover-color). */
+.nav-link-active {
+	color: var(--hover-color);
+}
+
+.nav-link-active-contrast {
+	color: var(--hover-color-contrast);
+}
+
+.nav-link-active-contrast .nav-content-active,
+.nav-link-active-contrast .nav-content-active-blur {
+	background-color: var(--hover-color-contrast);
 
 }
 
@@ -133,7 +160,7 @@
 	display: flex;
 	text-align: right;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
 }
 

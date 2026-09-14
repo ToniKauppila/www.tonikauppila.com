@@ -19,14 +19,12 @@
 	<title>Toni Kauppila | Recommendations</title>
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<link rel="preload" href="style/fonts/fjalla-one-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="style/fonts/judson-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="style/fonts/open-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<link rel="stylesheet" type="text/css" href="style/animate.css">
 	<link rel="stylesheet" type="text/css" href="style/grid.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Judson:wght@700&family=Open+Sans:wght@300;400;700&display=swap"
-		rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
@@ -49,20 +47,6 @@
 			</a>
 		</div>
 		<div class="mobile-nav-content">
-			<a href="index#work" class="white-link">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-					<g id="Work">
-						<path d="M22.25,18.94H1.8a.78.78,0,0,1-.8-.71v-.29H23v.29C23.05,18.66,22.67,18.94,22.25,18.94Z"
-							style="fill:#69E4FF" />
-						<path d="M4,5.06H20a1,1,0,0,1,1,1V16.43a0,0,0,0,1,0,0H3a0,0,0,0,1,0,0V6.06A1,1,0,0,1,4,5.06Z"
-							style="fill:none;stroke:#69E4FF;stroke-miterlimit:10" />
-					</g>
-				</svg>
-				<br>
-				Work
-			</a>
-		</div>
-		<div class="mobile-nav-content">
 			<a href="photos" class="white-link">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 					<g id="Photos">
@@ -76,7 +60,7 @@
 					</g>
 				</svg>
 				<br>
-				Photos
+				Photography
 			</a>
 		</div>
 		<div class="mobile-nav-content">
@@ -109,17 +93,15 @@
 			</div>
 			<div class="nav-40-right">
 				<div class="nav-content">
-					<a href="index#work" class="white-link">
-						<div class="nav-content-active">
-							<div class="nav-content-active-blur"></div>
-						</div>
-						Work
+					<a href="index" class="white-link">
+
+						Home
 					</a>
 				</div>
 				<div class="nav-content">
 					<a href="photos" class="white-link">
 
-						Photos
+						Photography
 					</a>
 				</div>
 				<div class="nav-content">
@@ -133,7 +115,7 @@
 	<!-- Desktop nav ends -->
 
 	<div class="top-spacer"></div>
-	<div id="wrapper" style="background-color: white !important;">
+	<div id="wrapper" style="background-color: var(--background-white) !important;">
 
 		<header>
 			<div>Recommendations</div>

@@ -721,7 +721,7 @@ video {
 	text-align: center;
 	line-height: 36px;
 	background: none;
-	width: 100%;
+	padding: 0 24px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -762,7 +762,7 @@ video {
 	text-align: center;
 	line-height: 36px;
 	background: none;
-	margin-left: 16px;
+	padding: 0 24px;
 	color: white;
 	border: white 1px solid;
 	border-radius: 100px;
@@ -774,6 +774,11 @@ video {
 
 .secondary-button:hover,
 .secondary-button-contact:hover {
+	border-color: var(--hover-color);
+	color: var(--hover-color);
+}
+
+.secondary-button-front-page:hover {
 	border-color: var(--hover-color);
 	color: var(--hover-color);
 }
@@ -805,7 +810,7 @@ form {
 .form-elements {
 	width: 80%;
 	border: 0;
-	color: var(--inverse);
+	color: var(--text-color-inverse);
 	margin: auto;
 }
 
@@ -830,7 +835,7 @@ textarea {
 	padding: 16px;
 	border-radius: 4px;
 	background: var(--background);
-	color: var(--inverse);
+	color: var(--text-color-inverse);
 	margin: 0;
 	font-family: 'Open Sans';
 	font-size: 16px;
@@ -887,7 +892,7 @@ textarea {
 }
 
 .thankyou_message h3 {
-	color: var(--inverse);
+	color: var(--text-color-inverse);
 	text-align: center;
 	transition: all ease-in 0.2s;
 }
@@ -963,7 +968,7 @@ textarea {
 }
 
 .modal-content p {
-	color: var(--inverse);
+	color: var(--text-color-inverse);
 	text-align: center;
 	font-size: 16px;
 	line-height: 22px;
